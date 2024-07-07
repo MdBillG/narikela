@@ -2,7 +2,8 @@ import Image from "next/image";
 import Banner from "./components/Banner/banner";
 import Navigation from "./components/Navigation/Navigation";
 import Header from "./components/Header/Header";
-import Sale from "./components/Sale/sale";
+import Sale from "./components/Sale/Sale";
+
 
 export default function Home() {
   return (
