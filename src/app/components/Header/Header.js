@@ -38,20 +38,22 @@ export default function Header() {
     }
 
     return (
-        <div className=' flex justify-between px-1 pt-2'>
+        <div className=' flex justify-between px-10 pt-2'>
             {screenWidth >= 770 && (
 
                 <><h1 className='text-2xl subpixel-antialiased tracking-wide font-medium text-[rgb(186,129,75)] '>Narikela</h1><Navigation /></>
             )}
             {screenWidth <= 770 && (
-                <IconButton
-                    handleClick={showMobileMenu}
-                    icon=" fas fa-bars text-[rgb(186,129,75)]" />
+                <>
+                    <div className=''><IconButton
+                        handleClick={showMobileMenu}
+                        icon=" fas fa-bars text-[rgb(186,129,75)]" /></div></>
             )}
 
             {mobileMenu && (
                 <MobileMenu />
             )}
+            {screenWidth <= 770 && (<h1 className='text-2xl subpixel-antialiased tracking-wide font-medium text-[rgb(186,129,75)] '>Narikela</h1>)}
             <Content />
         </div>
     )
