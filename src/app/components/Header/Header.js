@@ -45,7 +45,7 @@ export default function Header() {
             )}
             {screenWidth <= 770 && (
                 <>
-                    <div className=''><IconButton
+                    <div className='pt-2'><IconButton
                         handleClick={showMobileMenu}
                         icon=" fas fa-bars text-[rgb(186,129,75)] fa-xl" /></div></>
             )}
@@ -53,7 +53,7 @@ export default function Header() {
             {mobileMenu && (
                 <MobileMenu />
             )}
-            {screenWidth <= 770 && (<h1 className='text-2xl subpixel-antialiased tracking-wide font-bold text-[rgb(186,129,75)] '>Narikela</h1>)}
+            {screenWidth <= 770 && (<h1 className='text-2xl subpixel-antialiased tracking-wide font-bold text-[rgb(186,129,75)] pl-10'>Narikela</h1>)}
             <Content />
         </div>
     )
