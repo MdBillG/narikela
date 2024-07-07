@@ -38,7 +38,7 @@ export default function Header() {
     }
 
     return (
-        <div className=' flex justify-between px-7 pt-2'>
+        <div className=' flex justify-between px-5 pt-2'>
             {screenWidth >= 770 && (
 
                 <><h1 className='text-2xl subpixel-antialiased tracking-wide font-medium text-[rgb(186,129,75)] '>Narikela</h1><Navigation /></>
