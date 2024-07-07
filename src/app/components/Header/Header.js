@@ -47,13 +47,13 @@ export default function Header() {
                 <>
                     <div className=''><IconButton
                         handleClick={showMobileMenu}
-                        icon=" fas fa-bars text-[rgb(186,129,75)]" /></div></>
+                        icon=" fas fa-bars text-[rgb(186,129,75)] fa-xl" /></div></>
             )}
 
             {mobileMenu && (
                 <MobileMenu />
             )}
-            {screenWidth <= 770 && (<h1 className='text-2xl subpixel-antialiased tracking-wide font-medium text-[rgb(186,129,75)] '>Narikela</h1>)}
+            {screenWidth <= 770 && (<h1 className='text-2xl subpixel-antialiased tracking-wide font-bold text-[rgb(186,129,75)] '>Narikela</h1>)}
             <Content />
         </div>
     )

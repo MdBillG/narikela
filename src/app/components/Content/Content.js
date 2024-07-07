@@ -32,11 +32,11 @@ export default function Content() {
         <div className='flex gap-5 pt-1'>
 
             {screenWidth >= 770 && (
-                <IconButton icon="fas fa-user text-[rgb(186,129,75)] " />
+                <IconButton icon="fas fa-user text-[rgb(186,129,75)]  fa-xl" />
             )}
 
-            <IconButton icon="fas fa-search text-[rgb(186,129,75)]" />
-            <IconButton icon="fas fa-shopping-cart text-[rgb(186,129,75)]" />
+            <IconButton icon="fas fa-search text-[rgb(186,129,75)] fa-xl" />
+            <IconButton icon="fas fa-shopping-cart text-[rgb(186,129,75)] fa-xl" />
         </div>
     )
 }
