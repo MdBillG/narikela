@@ -10,6 +10,7 @@ export default function MobileMenu() {
                 <h1 className='text-xl subpixel-antialiased text-[rgb(186,129,75)]'>Testimonials</h1>
                 <h1 className='text-xl subpixel-antialiased text-[rgb(186,129,75)]'>Contact</h1>
             </div>
+
         </div>
     )
 }
