@@ -26,7 +26,7 @@ export default function Banner() {
     return (
         <div className="relative">
             <IconButton handleClick={prevSlide} icon="fas fa-chevron-left text-emerald-500 absolute top-1/2 left-20 transform -translate-y-1/2" />
-            <img className="px-10 w-full" src={images[currentIndex]} alt="banner" />
+            <img className="px-1 w-full" src={images[currentIndex]} alt="banner" />
             <IconButton handleClick={nextSlide} icon="fas fa-chevron-right text-emerald-500 absolute top-1/2 right-20 transform -translate-y-1/2" />
 
             <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
