@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Banner from "./components/Banner/banner";
 import Header from "./components/Header/Header";
 import Sale from "./components/Sale/Sale";
+import Explore from "./components/Explore/Explore";
+import FourCards from "./components/Cards/FourCards";
+import AboutUs from "./components/Cards/AboutUs";
 
 
 export default function Home() {
@@ -35,13 +38,15 @@ export default function Home() {
   return (
     <>
       <Sale />
-      <Header />
       <div className="pt-4">
         {screenWidth <= 770 && (<hr />)}
-
+        <Header />
       </div>
 
       <Banner />
+      <Explore />
+      <FourCards />
+      <AboutUs />
     </>
   );
 }
