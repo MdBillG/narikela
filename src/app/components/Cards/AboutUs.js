@@ -64,7 +64,7 @@ export default function AboutUs() {
 
             <div className='container mx-auto px-4 py-8'>
                 <div className='flex flex-col lg:flex-row items-center lg:items-start gap-8'>
-                    <div className='lg:w-1/2 sm:pt-16 md:pt-16:'>
+                    <div className='lg:w-1/2 sm:pt-16 md:pt-16 px-3'>
                         <h1 className='text-3xl font-bold mb-2'>About Us</h1>
                         <h2 className='text-2xl font-semibold mb-4'>The World Has Seen By Us</h2>
                         <p className='mb-6'>
