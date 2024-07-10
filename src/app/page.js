@@ -9,6 +9,8 @@ import FourCards from "./components/Cards/FourCards";
 import AboutUs from "./components/Cards/AboutUs";
 import OurUps from "./components/Cards/OurUps";
 import VideoBanner from "./components/Banner/VideoBanner";
+import Infographic from "./components/Cards/Infographic";
+import Blogs from "./components/Cards/Blogs";
 
 
 export default function Home() {
@@ -51,6 +53,8 @@ export default function Home() {
       <AboutUs />
       <OurUps />
       <VideoBanner />
+      <Infographic />
+      <Blogs />
     </>
   );
 }

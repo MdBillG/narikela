@@ -11,16 +11,16 @@ export default function Explore() {
 
 
 
-            <span className='mx-8 md:mx-10 lg:mx-52 text-lg md:text-xl text-[rgb(99,53,16)]'>
+            <span className='mx-8 md:mx-10 lg:mx-52 text-lg md:text-xl text-[rgb(99,53,16)] text-center'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </span>
 
-            <span className='mx-8 md:mx-10 lg:mx-52  text-lg md:text-xl text-[rgb(99,53,16)]'>
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,
+            <span className='mx-8 md:mx-10 lg:mx-52  text-lg md:text-xl text-[rgb(99,53,16)] text-center'>
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, magna aliqua. Ut enim ad minim veniam,
             </span>
 
-            <span className='mx-8 md:mx-10 lg:mx-52  text-lg md:text-xl text-[rgb(99,53,16)]'>
-                magna aliqua. Ut enim ad minim veniam,
+            <span className='mx-8 md:mx-10 lg:mx-52  text-lg md:text-xl text-[rgb(99,53,16)] text-center'>
+
             </span>
 
 
