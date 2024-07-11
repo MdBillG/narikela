@@ -5,10 +5,10 @@ export default function Blogs() {
         <div>
             <h1>Our Blogs</h1>
             <hr />
-            <div className='flex flex-row'>
-                <h1>blog1 heading</h1>
+            <div className='flex flex-col  sm:flex-row'>
+                <p className='mx-36 sm:mx-14 md:mx-32 lg:mx-36 my-2 sm:my-14'>blog1 heading</p>
                 <img
-                    className="w-1/4 h-32 object-cover rounded-xl my-7"
+                    className="sm:w-1/4  w-1/2 mx-24 sm:h-32 object-cover rounded-xl my-2"
                     src={`/image/4cards/image2.jpeg`}
                     alt={`Card`}
                 />
