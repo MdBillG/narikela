@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import IconButton from '../buttons.js/iconButton'
+import React, { useEffect, useState } from "react";
+import IconButton from "../buttons.js/iconButton";
 
 export default function Content() {
-
-
     const [screenWidth, setScreenWidth] = useState(null);
-    const [mobileMenu, setMobileMenu] = useState(false)
+    const [mobileMenu, setMobileMenu] = useState(false);
 
     useEffect(() => {
         // Function to update screen width
@@ -17,11 +15,11 @@ export default function Content() {
         updateScreenWidth();
 
         // Event listener for screen width changes
-        window.addEventListener('resize', updateScreenWidth);
+        window.addEventListener("resize", updateScreenWidth);
 
         // Clean up the event listener
         return () => {
-            window.removeEventListener('resize', updateScreenWidth);
+            window.removeEventListener("resize", updateScreenWidth);
         };
     }, []);
 
@@ -29,14 +27,41 @@ export default function Content() {
         return null;
     }
     return (
-        <div className='flex gap-5 pt-1'>
-
+        <div className="flex gap-5 pt-1">
             {screenWidth >= 770 && (
-                <IconButton icon="fas fa-user text-[rgb(186,129,75)]  fa-xl" />
+                <>
+                    <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                        Home
+                    </button>
+                    <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                        About
+                    </button>
+                    <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                        Products
+                    </button>
+                    <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                        Testimonials
+                    </button>
+                    <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                        Contact
+                    </button>
+                    <IconButton icon="fab fa-facebook text-[rgb(186,129,75)] fa-xl" />
+                    <IconButton icon="fab fa-instagram text-[rgb(186,129,75)] fa-xl" />
+
+                </>
             )}
 
-            <IconButton icon="fas fa-search text-[rgb(186,129,75)] fa-xl" />
-            <IconButton icon="fas fa-shopping-cart text-[rgb(186,129,75)] fa-xl" />
+
+
+            {screenWidth <= 770 && (
+                <>
+
+                    <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                        Products
+                    </button>
+
+                </>
+            )}
         </div>
-    )
+    );
 }
