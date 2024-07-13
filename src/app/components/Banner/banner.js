@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react'
 import IconButton from '../buttons.js/iconButton'
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
 export default function Banner() {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -24,7 +26,8 @@ export default function Banner() {
     }
 
     return (
-        <div className="relative">
+        <>
+            {/* <div className="relative">
             <IconButton handleClick={prevSlide} icon="fas fa-chevron-left text-emerald-500 absolute top-1/2 left-20 transform -translate-y-1/2" />
             <img className="px-1 w-full" src={images[currentIndex]} alt="banner" />
             <IconButton handleClick={nextSlide} icon="fas fa-chevron-right text-emerald-500 absolute top-1/2 right-20 transform -translate-y-1/2" />
@@ -38,6 +41,21 @@ export default function Banner() {
                     ></span>
                 ))}
             </div>
-        </div>
+        </div> */}
+            <div className='w-screen h-auto'>
+                <AwesomeSlider mobileTouch="true" infinite="true " >
+                    <div className="w-full h-full">
+                        <img className="w-full h-full" src="/image/banner/coconutbanner2.jpg" />
+                    </div>
+                    <div className="w-full h-full">
+                        <img className="w-full h-full" src="/image/banner/coconutbanner4.jpg" />
+                    </div>
+                    <div className="w-full h-full">
+                        <img className="w-full h-full" src="/image/banner/coconutbanner5.jpg" />
+                    </div>
+
+                </AwesomeSlider>
+            </div>
+        </>
     )
 }

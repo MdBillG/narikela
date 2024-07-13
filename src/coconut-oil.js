@@ -1,4 +1,4 @@
-export const coconutData = {
+export const coconutData = [{
   "coconut": [
     {
       "product": "Coconut Oil",
@@ -8,6 +8,7 @@ export const coconutData = {
         {
           "id": 1,
           "size": "1 ltr",
+          "mainImage": "/image/oil/oil1ltr.jpg",
           "image": [{
             "oil": "/image/oil/oil1ltr.jpg",
             "infographic1": "/image/oil/infographics1.jpg",
@@ -21,6 +22,7 @@ export const coconutData = {
         {
           "id": 500,
           "size": "500 ml",
+          "mainImage": "/image/oil/500ml/oil500ml.jpg",
           "image": [{
             "oil": "/image/oil/500ml/oil500ml.jpg",
             "infographic1": "/image/oil/500ml/infogrpahics1.jpg",
@@ -34,6 +36,7 @@ export const coconutData = {
         {
           "id": 250,
           "size": "250 ml (Pack of 3)",
+          "mainImage": "/image/oil/250ml/oil250ml.jpg",
           "image": [{
             "oil": "/image/oil/250ml/oil250ml.jpg",
             "infographic1": "/image/oil/250ml/infogrpahics1.jpg",
@@ -54,5 +57,25 @@ export const coconutData = {
       ]
     },
 
-  ]
-};
+  ],
+  "DesssicatePowder": [{
+    "product": " Desssicate powder",
+    "ingredients": ["Our desiccated coconut powder is crafted with care, using only the finest dried coconuts. We meticulously remove only the moisture content, preserving the natural flavor, aroma, and nutritional value."],
+    "variants": [{
+      "id": 22,
+      "image": "/image/Dpowder/dpowder1.jpg",
+      "mrp": "330"
+
+    }]
+  }
+
+  ],
+  "Copra": [{
+    "product": "Copra",
+    "variants": [{
+      "id": "D1",
+      "image": "/image/4cards/image4.jpeg"
+
+    }]
+  }]
+}];
