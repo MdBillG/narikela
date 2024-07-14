@@ -47,13 +47,13 @@ export const coconutData = [{
           "mrp": 210,
           "sellingPrice": 195
         },
-        {
-          "id": 5,
-          "size": "5 ltr",
-          "image": "/image/4cards/image4.jpeg",
-          "mrp": 1100,
-          "sellingPrice": 999
-        }
+        // {
+        //   "id": 5,
+        //   "size": "5 ltr",
+        //   "image": "/image/4cards/image4.jpeg",
+        //   "mrp": 1100,
+        //   "sellingPrice": 999
+        // }
       ]
     },
 
