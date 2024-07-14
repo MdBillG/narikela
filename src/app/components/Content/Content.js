@@ -8,40 +8,20 @@ export default function Content() {
     const [mobileMenu, setMobileMenu] = useState(false);
     const router = useRouter()
 
-    useEffect(() => {
-        // Function to update screen width
-        const updateScreenWidth = () => {
-            setScreenWidth(window.innerWidth);
-        };
 
-        // Initial screen width on component mount
-        updateScreenWidth();
-
-        // Event listener for screen width changes
-        window.addEventListener("resize", updateScreenWidth);
-
-        // Clean up the event listener
-        return () => {
-            window.removeEventListener("resize", updateScreenWidth);
-        };
-    }, []);
-
-    if (screenWidth === null) {
-        return null;
-    }
 
     const handleClick = () => {
         router.push("/plp")
         console.log("clicked")
     }
     return (
-        <div className="flex gap-5 pt-1">
+        <div className="flex gap-5 pt-1 ">
 
             <div className="md:block hidden">
-                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]" onClick={() => router.push("/")}>
                     Home
                 </button>
-                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]" >
+                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]" onClick={() => router.push("/about")}>
                     About
                 </button>
                 <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]" onClick={handleClick}>
@@ -61,15 +41,15 @@ export default function Content() {
 
 
 
-            {screenWidth <= 770 && (
-                <>
 
-                    <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]" onClick={handleClick}>
-                        Products
-                    </button >
+            <>
 
-                </>
-            )}
+                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] sm:hidden block" onClick={handleClick}>
+                    Products
+                </button >
+
+            </>
+
         </div>
     );
 }

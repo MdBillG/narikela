@@ -4,10 +4,8 @@ import React from "react";
 const Footer = () => {
     return (
         <>
-
-
             <footer>
-                <div className="grid grid-cols-1 sm:grid-cols-3 sm:text-center bg-[#166534] text-white">
+                <div className="grid grid-cols-1 sm:grid-cols-3 sm:text-center   bg-[#1B2F1F] text-white">
                     <div className="">
                         <p>
                             Narikela, from Tiptur since 1954, offers premium cold-pressed

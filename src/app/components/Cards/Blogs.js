@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Blogs() {
     return (
-        <div>
+        <div className="w-1/2" >
             <h1>Our Blogs</h1>
             <hr />
-            <div className="flex flex-col  sm:flex-row">
-                <div>
+            {/* <div className="flex flex-col w-screen ">
+                <div className="flex flex-row">
                     <p className="mx-36 sm:mx-14 md:mx-32 lg:mx-36 my-2 sm:my-14">
                         blog1 heading
                     </p>
@@ -21,7 +21,7 @@ export default function Blogs() {
                     </h1>
                 </div>
                 <hr />
-                <div>
+                <div className="flex flex-row">
                     <p className="mx-36 sm:mx-14 md:mx-32 lg:mx-36 my-2 sm:my-14">
                         blog1 heading
                     </p>
@@ -34,9 +34,10 @@ export default function Blogs() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
                     </h1>
+                    <button>Know More</button>
                 </div>
                 <hr />
-                <div>
+                <div className="flex flex-row">
                     <p className="mx-36 sm:mx-14 md:mx-32 lg:mx-36 my-2 sm:my-14">
                         blog1 heading
                     </p>
@@ -50,7 +51,7 @@ export default function Blogs() {
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
                     </h1>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

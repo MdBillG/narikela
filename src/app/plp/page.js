@@ -59,7 +59,6 @@ export default function page() {
 
     return (
         <div>
-            <Header />
             <div className="flex flex-row gap-4">
                 <button onClick={() => setProduct("all")}>all</button>
                 <button onClick={() => setProduct("coconutOilVariants")}>oil</button>

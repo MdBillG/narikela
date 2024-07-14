@@ -10,21 +10,21 @@ export default function FourCards() {
                 {[1, 2, 3, 4].map((num) => (
                     <div key={num} className="relative">
                         <img
-                            className="w-full h-48 object-cover rounded-xl"
-                            src={`/image/4cards/image${num}.jpeg`}
+                            className="w-full sm:h-64  h-75 object-cover rounded-md"
+                            src={`/image/4cards/four${num}.png`}
                             alt={`Card ${num}`}
                         />
                         <div className="absolute bottom-0 left-0 right-0 pb-3 px-1 ">
-                            <div className='bg-white bg-opacity-80 rounded-full p-2 pr-4 w-full'>
+                            <div className='bg-[#1B2F1F] bg-opacity-95  h-10 rounded-md p-2 pr-4 w-full'>
                                 <div className="flex justify-between items-center">
-                                    <div className="flex-grow text-sm ">
-                                        {num === 1 && <p>Narikela 1ltr</p>}
-                                        {num === 2 && <p>Narikela 1/4ltr</p>}
-                                        {num === 3 && <p>Narikela 1/2ltr</p>}
-                                        {num === 4 && <p className='sm:text-xs'>Narikela Dessicated Powder</p>}
+                                    <div className="flex-grow text-sm  mx-auto">
+                                        {num === 1 && <p className='text-[#D1B87A]'>Narikela 1ltr</p>}
+                                        {num === 2 && <p className='text-[#D1B87A]' >Narikela 1/4ltr</p>}
+                                        {num === 3 && <p className='text-[#D1B87A]'>Narikela 1/2ltr</p>}
+                                        {num === 4 && <p className='sm:text-xs text-[#D1B87A]'>Narikela Dessicated Powder</p>}
                                     </div>
                                     <IconButton
-                                        icon="fas fa-chevron-right fa-xs"
+                                        icon="fas fa-chevron-right fa-xs text-[#D1B87A]"
                                         className="flex-shrink-0"
                                     />
                                 </div>

@@ -13,17 +13,6 @@ export default function Banner() {
         "/image/banner/coconutbanner5.jpg"
     ]
 
-    const nextSlide = () => {
-        setCurrentIndex((currentIndex + 1) % images.length)
-    }
-
-    const prevSlide = () => {
-        setCurrentIndex((currentIndex - 1 + images.length) % images.length)
-    }
-
-    const goToSlide = (index) => {
-        setCurrentIndex(index)
-    }
 
     return (
         <>
@@ -42,7 +31,21 @@ export default function Banner() {
                 ))}
             </div>
         </div> */}
-            <div className='w-screen h-auto'>
+            {/* <div>
+                <img src="/image/bannerbackground/bannerbackground.png" alt="" />
+                <img src="/image/bannerbackground/bannerbackground2.png" alt="" />
+            </div>
+
+            <div className="relative">
+                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <img
+                    src="/image/bannerbackground/bannerbackground.png"
+                    alt="Coconut palm trees"
+                    className="w-full h-full object-cover filter blur-sm"
+                />
+            </div>
+
+            <div className='w-1/2 h-1/2 mx-auto'>
                 <AwesomeSlider mobileTouch="true" infinite="true " >
                     <div className="w-full h-full">
                         <img className="w-full h-full" src="/image/banner/coconutbanner2.jpg" />
@@ -55,6 +58,34 @@ export default function Banner() {
                     </div>
 
                 </AwesomeSlider>
+            </div> */}
+
+
+
+            <div className="relative inner-shadow">
+                <div className="absolute ">
+                    <img
+                        src="/image/bannerbackground/bannerbackground22.png"
+                        alt="Background"
+                        className="w-full h-full "
+                    />
+                    <div className="absolute "></div>
+                </div>
+                <div className='h-15 '>
+                    <div className='relative w-1/2 h-1/2 mx-auto z-10 my-auto '>
+                        <AwesomeSlider mobileTouch={true} infinite={true} >
+                            <div className="w-full h-1/2">
+                                <img className="w-full h-full object-cover " src="/image/banner/coconutbanner2.jpg" alt="Coconut Banner 2" />
+                            </div>
+                            <div className="w-full h-1/2">
+                                <img className="w-full h-full object-cover" src="/image/banner/coconutbanner4.jpg" alt="Coconut Banner 4" />
+                            </div>
+                            <div className="w-full h-1/2">
+                                <img className="w-full h-full object-cover" src="/image/banner/coconutbanner5.jpg" alt="Coconut Banner 5" />
+                            </div>
+                        </AwesomeSlider>
+                    </div>
+                </div>
             </div>
         </>
     )

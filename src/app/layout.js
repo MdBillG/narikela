@@ -2,6 +2,7 @@ import { Inter, IBM_Plex_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -14,7 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      <body className={inter.className}><Header />{children}
+      <body className={inter.className} style={{ backgroundColor: "#F3EEE1" }}><Header />{children}
+        <Footer />
 
       </body>
     </html>

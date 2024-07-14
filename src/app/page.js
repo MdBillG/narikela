@@ -13,7 +13,7 @@ import Infographic from "./components/Cards/Infographic";
 import Blogs from "./components/Cards/Blogs";
 import Link from "next/link";
 import Image from 'next/image';
-import Footer from "./Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 
 export default function Home() {
@@ -24,9 +24,9 @@ export default function Home() {
   return (
     <>
 
-      <div className="pt-4">
+      <div className="pt-4 bg-[#1B2F1F] ">
 
-        <hr className="md:hidden block" />
+
       </div>
       <Banner />
       <Explore />
@@ -36,7 +36,7 @@ export default function Home() {
       <VideoBanner />
       <Infographic />
       <Blogs />
-      <Footer />
+
 
 
 
