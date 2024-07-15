@@ -79,3 +79,42 @@ export const coconutData = [{
     }]
   }]
 }];
+
+
+export const fourCards = [{
+  "variants": [
+    {
+      "id": 1,
+      "size": "1 ltr",
+      "name": "Narikela 1ltr",
+      "mainImage": "/image/4cards/four1.png",
+      "mrp": 250,
+      "sellingPrice": 225
+    },
+    {
+      "id": 500,
+      "size": "500 ml",
+      "name": "Narikela 1/2ltr",
+      "mainImage": "/image/4cards/four2.png",
+      "mrp": 130,
+      "sellingPrice": 120
+    },
+    {
+      "id": 250,
+      "size": "250 ml (Pack of 3)",
+      "name": "Narikela 1/4ltr",
+      "mainImage": "/image/4cards/four3.png",
+      "mrp": 210,
+      "sellingPrice": 195
+    },
+    {
+      "id": "D1",
+      "size": "250 ml (Pack of 3)",
+      "name": "Dessicated Powder",
+      "mainImage": "/image/4cards/four4.png",
+      "mrp": 210,
+      "sellingPrice": 195
+    }
+
+  ]
+}]

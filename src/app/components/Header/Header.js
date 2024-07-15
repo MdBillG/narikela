@@ -5,14 +5,18 @@ import Navigation from "../Navigation/Navigation";
 import Content from "../Content/Content";
 import IconButton from "../buttons.js/iconButton";
 import MobileMenu from "../Mobile-Menu/MobileMenu";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+    const router = useRouter()
     const [screenWidth, setScreenWidth] = useState(null);
     const [mobileMenu, setMobileMenu] = useState(false);
 
     const showMobileMenu = () => {
         setMobileMenu(true);
     };
+
+
 
     return (
         <div className=" flex justify-between px-5 pt-2 bg-[#1B2F1F]">
@@ -26,7 +30,7 @@ export default function Header() {
             </>
 
             {mobileMenu && <MobileMenu setMobileMenu={setMobileMenu} />}
-            <img className="w-10 h-10" src="/image/brandicon/barndlogo.png" alt="" />
+            <img className="w-10 h-10" src="/image/brandicon/barndlogo.png" alt="" onClick={() => router.push('/')} />
 
             <Content />
         </div>
