@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         primary: "#BA814B"
       },
+      fontFamily: {
+        'cormorant': ['"Cormorant Garamond"', 'serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+
+      },
       container: {
         center: true,
         padding: {
