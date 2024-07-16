@@ -67,7 +67,7 @@ const About = () => {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3  ">
-                    <div className="flex sm:flex-col sm:justify-center sm:items-center  sm:ml-36">
+                    <div className="flex sm:flex-col flex-col gap-2 mx-auto  mt-2 sm:justify-center sm:items-center  sm:ml-36">
                         <div className="h-10 bg-[#F3EEE1]   rounded-2xl w-56 text-center my-auto drop-shadow-lg border border-[#D1B87A] text-[#593B1F] border-opacity-50 flex items-center justify-center font-cormorant">
                             <p>Moisturizes Skin</p>
                             <img
@@ -100,7 +100,7 @@ const About = () => {
                             alt=""
                         />
                     </div>
-                    <div className="flex sm:flex-col sm:justify-center sm:items-center sm:mr-36">
+                    <div className="flex sm:flex-col flex-col mx-auto gap-2 mb-2 sm:justify-center sm:items-center sm:mr-36">
                         <div className="h-10 bg-[#F3EEE1]   rounded-2xl w-56 text-center my-auto drop-shadow-lg border border-[#D1B87A] text-[#593B1F] border-opacity-50 flex items-center justify-center font-cormorant">
                             <img
                                 className=" mr-2 w-10 h-7"
