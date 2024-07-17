@@ -39,7 +39,7 @@ export default function FourCards() {
                 ))}
             </div> */}
 
-            <div className="grid grid-cols-2 md:grid-cols-4  gap-2 p-2 mx-4 md:mx-10">
+            <div className="grid grid-cols-2 md:grid-cols-4  gap-3  p-2 mx-4 md:mx-10">
                 {fourCards[0]?.variants?.map((num) => (
                     <div key={num} className="relative" onClick={() => router.push(`/productDetail/${num?.id}`)}>
                         <img
@@ -47,7 +47,7 @@ export default function FourCards() {
                             src={num?.mainImage}
                             alt={`Card ${num}`}
                         />
-                        <div className="absolute bottom-0 left-0 right-0 pb-3 px-1 ">
+                        <div className="absolute bottom-0 left-0 right-0 pb-3 px-1 font-poppins">
                             <div className='bg-[#1B2F1F] bg-opacity-95  h-10 rounded-md p-2 pr-4 w-full'>
                                 <div className="flex justify-between items-center">
                                     <div className="flex-grow text-xs mx-auto text-[#D1B87A]">

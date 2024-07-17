@@ -74,11 +74,11 @@ export default function AboutUs() {
                         <div className="container mx-auto px-4 py-8">
                             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
                                 <div className="lg:w-1/2 sm:pt-16 md:pt-16 px-3">
-                                    <h1 className="text-3xl font-bold mb-2">About Us</h1>
-                                    <h2 className="text-2xl font-semibold mb-4">
+                                    <h1 className="text-3xl font-medium mb-2 font-cormorant text-[#593B1F]  italic text-center sm:text-start">ABOUT US</h1>
+                                    <h2 className="text-2xl font-medium mb-4 font-cormorant text-[#1B2F1F]  text-center sm:text-start">
                                         Generations of Purity
                                     </h2>
-                                    <p className="mb-6">
+                                    <p className="mb-6 font-poppins sm:text-sm  text-xs text-center sm:text-start">
                                         At Narikela, nestled in the lush greenery of Tiptur, our family
                                         heritage of coconut cultivation dates back to 1954. Our legacy is
                                         built on excellence and trust, passed down through generations. We
@@ -88,7 +88,7 @@ export default function AboutUs() {
                                         sun-ripened coconut is handpicked and cold-pressed to preserve its
                                         natural richness, ensuring the highest quality coconut oil
                                     </p>
-                                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors ">
                                         Know More
                                     </button>
                                 </div>

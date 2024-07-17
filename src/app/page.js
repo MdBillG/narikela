@@ -33,9 +33,9 @@ export default function Home() {
       <FourCards />
       <AboutUs />
       <OurUps />
-      <VideoBanner />
+      {/* <VideoBanner />
       <Infographic />
-      <Blogs />
+      <Blogs /> */}
 
 
 

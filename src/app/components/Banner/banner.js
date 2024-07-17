@@ -60,9 +60,16 @@ export default function Banner() {
                 </AwesomeSlider>
             </div> */}
 
+            <div className=" ">
+                <img
+                    src="/image/bannerbackground/bannerbackground22.png"
+                    alt="Background"
+                    className="w-full h-full "
+                />
 
+            </div>
 
-            <div className="relative inner-shadow">
+            {/* <div className="relative inner-shadow">
                 <div className="absolute ">
                     <img
                         src="/image/bannerbackground/bannerbackground22.png"
@@ -86,7 +93,7 @@ export default function Banner() {
                         </AwesomeSlider>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
