@@ -2,7 +2,7 @@ import React from "react";
 import { instagram } from "@/coconut-oil";
 
 const Instagram = () => {
-    console.log("instagram", instagram);
+    console.log("instmmmagram", instagram);
 
     return (
         <>
@@ -11,6 +11,7 @@ const Instagram = () => {
                 <h1 className='font-cormorant text-[#593B1F] font-normal sm:text-3xl text-center mb-6 italic text-xl'>
                     BE PART OF OUR INSTAGRAM FAMILY
                 </h1>
+
 
                 <div className="flex flex-wrap justify-center gap-4 ">
                     {instagram[0].images.map((image, index) => (
