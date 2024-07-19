@@ -2,7 +2,7 @@ import React from "react";
 import { instagram } from "@/coconut-oil";
 
 const Instagram = () => {
-    console.log("instmmmagram", instagram);
+    console.log("instmmagram", instagram);
 
     return (
         <>
