@@ -10,7 +10,7 @@ export default function MobileMenu({ setMobileMenu }) {
                 <a href='/about'>About Us</a>
                 <a >Products</a>
                 <a href='/blogs'>Blogs</a>
-                <a >Contact Us</a>
+                <a href='/contact'>Contact Us</a>
             </div>
             <div className='absolute top-5 right-5'>
                 <IconButton

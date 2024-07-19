@@ -28,7 +28,7 @@ export default function Content() {
                 <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] mr-3" onClick={() => router.push('/blogs')}>
                     Blogs
                 </button>
-                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]">
+                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)]" onClick={() => router.push('/contact')}>
                     Contact
                 </button>
                 {/* <IconButton icon="fab fa-facebook text-[rgb(186,129,75)] fa-xl" />
