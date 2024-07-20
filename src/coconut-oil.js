@@ -111,7 +111,7 @@ export const coconutData = [
             id: 22,
             image: "/image/plp/dpowder.png",
             mrp: "330",
-            name: "Narikela Dessicated Coconut Powder",
+            name: "Dessicated Coconut Powder",
             icon: "/image/plp/Ellipse.png",
             benefits: [
               "Moisturizes Skin",
