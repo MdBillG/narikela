@@ -12,10 +12,21 @@ export const coconutData = [
           {
             id: 1,
             size: "1 ltr",
-            mainImage: "/image/oil/oil1ltr.jpg",
+            mainImage: "/image/plp/oil1.png",
+            name: "Narikela 1 Ltr Coconut Oil",
+            icon: "/image/plp/Ellipse.png",
+            benefits: [
+              "Moisturizes Skin",
+              "Nourishes Hair",
+              "Boosts Energy",
+              "Boosts Immunity",
+
+              "Improves Metabolism",
+              "Reduces Bad Cholesterol"
+            ],
             image: [
               {
-                oil: "/image/oil/oil1ltr.jpg",
+                oil: "/image/plp/oil1.jpg",
                 infographic1: "/image/oil/infographics1.jpg",
                 infographic2: "/image/oil/infographics1.jpg",
                 infographic3: "/image/oil/infographics1.jpg",
@@ -28,7 +39,18 @@ export const coconutData = [
           {
             id: 500,
             size: "500 ml",
-            mainImage: "/image/oil/500ml/oil500ml.jpg",
+            mainImage: "/image/plp/oil500.png",
+            name: "Narikela 1/2 Ltr Coconut Oil",
+            icon: "/image/plp/Ellipse.png",
+            benefits: [
+              "Moisturizes Skin",
+              "Nourishes Hair",
+              "Boosts Energy",
+              "Boosts Immunity",
+
+              "Improves Metabolism",
+              "Reduces Bad Cholesterol"
+            ],
             image: [
               {
                 oil: "/image/oil/500ml/oil500ml.jpg",
@@ -44,10 +66,21 @@ export const coconutData = [
           {
             id: 250,
             size: "250 ml (Pack of 3)",
-            mainImage: "/image/oil/250ml/oil250ml.jpg",
+            mainImage: "/image/plp/oil250.png",
+            name: "Narikela 1/4 Ltr Coconut Oil",
+            icon: "/image/plp/Ellipse.png",
+            benefits: [
+              "Moisturizes Skin",
+              "Nourishes Hair",
+              "Boosts Energy",
+              "Boosts Immunity",
+
+              "Improves Metabolism",
+              "Reduces Bad Cholesterol"
+            ],
             image: [
               {
-                oil: "/image/oil/250ml/oil250ml.jpg",
+                oil: "/image/plp/oil250.png",
                 infographic1: "/image/oil/250ml/infogrpahics1.jpg",
                 infographic2: "/image/oil/250ml/infogrpahics2.jpg",
                 infographic3: "/image/oil/250ml/infogrpahics3.jpg",
@@ -76,8 +109,19 @@ export const coconutData = [
         variants: [
           {
             id: 22,
-            image: "/image/Dpowder/dpowder1.jpg",
+            image: "/image/plp/dpowder.png",
             mrp: "330",
+            name: "Narikela Dessicated Coconut Powder",
+            icon: "/image/plp/Ellipse.png",
+            benefits: [
+              "Moisturizes Skin",
+              "Nourishes Hair",
+              "Boosts Energy",
+              "Boosts Immunity",
+
+              "Improves Metabolism",
+              "Reduces Bad Cholesterol"
+            ],
           },
         ],
       },
