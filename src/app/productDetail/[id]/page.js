@@ -77,7 +77,7 @@ export default function page() {
                             <p className="pl-1 text-sm">Genuine</p>
                         </div>
                         <div className="flex  pb-2 ">
-                            <img className="w-5 h-4" src="/image/pdp/payment.png" alt="" />
+                            <img className="w-5 h-4" src="/image/pdp/payment-method 1.png" alt="" />
                             <p className="pl-2 text-[#593B1F]"> Secure </p>
                             <p className="pl-1 text-sm"> Payment</p>
                         </div>
