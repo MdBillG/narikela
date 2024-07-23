@@ -197,3 +197,66 @@ export const instagram = [
     ],
   },
 ];
+
+
+export const pdp = [
+  {
+    main: "/image/pdp/pdpmain1.png",
+    side1: "/image/pdp/pdpside1.png",
+    side2: "/image/pdp/pdpside2.png",
+    side3: "/image/pdp/pdpside3.png",
+
+  },
+];
+
+export const keyFeature = [
+  {
+    key: "/image/pdp/keyF1.png",
+  },
+  {
+
+    key: "/image/pdp/keyF2.png",
+
+  }, {
+    key: "/image/pdp/keyF3.png",
+
+  }
+
+
+]
+
+export const ingredients = [
+  {
+    ingredients: "/image/pdp/ingredients1.png",
+  },
+  {
+
+    ingredients: "/image/pdp/ingredients2.png",
+
+  }, {
+    ingredients: "/image/pdp/ingredients3.png",
+
+  }
+
+
+]
+
+export const use1 = [{
+  use: "/image/pdp/skincare.png"
+
+}, {
+  use: "/image/pdp/healthy.png"
+
+}, {
+  use: "/image/pdp/immunity.png"
+}]
+
+export const use2 = [{
+  use: "/image/pdp/stamina.png"
+
+}, {
+  use: "/image/pdp/digestion.png"
+
+}, {
+  use: "/image/pdp/saturated.png"
+}]

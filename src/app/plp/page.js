@@ -141,7 +141,7 @@ export default function page() {
                                 </div>
 
                                 <div className="pt-2">
-                                    <button className=" sm:w-64 w-32 border border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F] mx-5 rounded-md h-8 items-center">
+                                    <button className=" sm:w-64 w-32 border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F] mx-5 rounded-md h-8 items-center">
                                         View Product
                                     </button>
                                 </div>
