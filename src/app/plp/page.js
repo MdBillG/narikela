@@ -22,18 +22,20 @@ export default function page() {
             name: variant?.name,
             icon: variant.icon,
             benefits: variant?.benefits,
+            sellingPrice: variant?.sellingPrice,
         })
     );
     console.log("coconutOilVariants", coconutOilVariants);
 
     const DesssicatePowder = coconutData[0].DesssicatePowder[0]?.variants?.map(
         (variant) => ({
-            mrp: variant.mrp,
             id: variant.id,
             mainImage: variant?.image,
             name: variant?.name,
             icon: variant.icon,
             benefits: variant?.benefits,
+            mrp: variant?.mrp,
+            sellingPrice: variant?.sellingPrice,
         })
     );
 
@@ -76,18 +78,15 @@ export default function page() {
                         Experience The Natural Goodness
                     </p>
                     <span className="text-xs sm:text-xl text-[#D1B87A] flex">
-                        {" "}
                         <a href="" className="mr-1">
-                            {" "}
                             Home
-                        </a>{" "}
+                        </a>
                         <img
                             className="h-3 sm:h-6 mt-[2px]"
                             src="/image/blogs/blogline.png"
                             alt=""
                         />
                         <a href="" className="ml-1">
-                            {" "}
                             Blogs
                         </a>
                     </span>
@@ -99,20 +98,11 @@ export default function page() {
                 <span className=' text-4xl  text-[#1B2F1F] text-center  mt-4'> Experience Purity in Every Drop</span>
             </div>
             <div className="font-poppins mx-3">
-                {/* <div className="flex flex-row gap-4">
-        <button onClick={() => setProduct("all")}>all</button>
-        <button onClick={() => setProduct("coconutOilVariants")}>oil</button>
-        <button onClick={() => setProduct("DesssicatePowder")}>powder</button>
-    </div> */}
                 <div className=" grid grid-cols-2 sm:grid-cols-4 mx-1 gap-3 drop-shadow-2xl my-10  ">
                     {data?.map((variant, index) => (
                         <div
                             key={variant.id}
-                            // className=" border-b border-b-black shadow-2xl rounded-lg"
-                            // style={{
-                            //     borderRight: index % 2 === 0 ? "0.5px solid black" : "none",
-                            //     borderLeft: index % 2 !== 0 ? "0.5px solid black" : "none",
-                            // }}
+
                             onClick={() => router.push(`/productDetail/${variant.id}`)}
                         >
                             <div className="border border-[#D1B87A] rounded-lg drop-shadow-sm shadow-xl pb-4 border-opacity-25">
@@ -121,8 +111,16 @@ export default function page() {
 
                                 <p className="mx-4 font-medium text-[#1B2F1F] mt-2">
                                     {variant.name}
+
                                 </p>
-                                <div className="mx-2">
+                                <div className="flex">
+                                    <img className="w-4 h-4 mt-1 ml-3" src="/image/pdp/currencylogo.png" alt="" />
+                                    <div className="flex">
+                                        <div className="line-through ml-[8%] mr-[8%]">{variant.mrp}</div>
+                                        {variant.sellingPrice}
+                                    </div>
+                                </div>
+                                <div className="mx-2 sm:block hidden">
                                     <div className="grid grid-cols-2 gap-1 mt-2 mx-1 ">
                                         {variant.benefits.map((benefit, idx) => (
                                             <div
@@ -140,32 +138,24 @@ export default function page() {
                                     </div>
                                 </div>
 
+                                <div className="mx-2 sm:hidden block">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mt-2 mx-1">
+                                        {variant.benefits.slice(0, 2).map((benefit, idx) => (
+                                            <div key={idx} className="flex items-center text-start font-thin text-xs text-[#1B2F1F]">
+                                                <img src={variant.icon} alt="" className="w-2 h-2 mr-2" />
+                                                <span className="text-[9px] sm:text-xs">{benefit}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+
                                 <div className="pt-2">
-                                    <button className=" sm:w-64 w-32 border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F] mx-5 rounded-md h-8 items-center">
+                                    <button className=" sm:w-64 w-[82%] border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F] sm:mx-5  mx-[10%] rounded-md h-8 items-center">
                                         View Product
                                     </button>
                                 </div>
                             </div>
-
-                            {/* <div>
-                {variant.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex flex-row items-center mb-1">
-                        <img src={variant.icon} alt="" lassName="w-3 h-3 mr-2" />
-                        <span className="sm:text-sm text-xs">{benefit}</span>
-                    </div>
-                ))}
-            </div> */}
-
-                            {/* <div className="flex flex-wrap mt-2 px-2 py-1 bg-[#FFF9E5]">
-                {variant.benefits.map((benefit, idx) => (
-                    <div key={idx} className={`flex items-center ${idx < 3 ? 'w-1/3' : idx < 5 ? 'w-1/2' : 'w-full'} mb-1`}>
-                        <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-2 flex-shrink-0"></div>
-                        <span className="text-xs sm:text-sm text-[#4A4A4A] break-words">{benefit}</span>
-                    </div>
-                ))}
-            </div> */}
-                            {/* <p>MRP: {variant.mrp}</p>
-            <p>ID: {variant.id}</p> */}
                         </div>
                     ))}
                 </div>
