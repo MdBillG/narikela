@@ -39,13 +39,13 @@ export default function page() {
                     </span>
                 </div>
             </div>
-            <div className="sm:ml-[100px] ml-2">
+            <div className="sm:ml-[100px] lg:ml-[100px] md:ml[100pxs] ml-2">
                 <div className=" text-xl font-semibold text-[#593B1F]  italic pt-4 sm:w-3/4 mx-auto">
                     NARIKELA TREASURES
                 </div>
             </div>
 
-            <div className="flex justify-center  ">
+            <div className="flex sm:justify-center  ">
 
                 <div className="flex sm:flex-row  flex-col">
                     <div className="drop-shadow-2xl sm:w-[435px]">
@@ -60,7 +60,7 @@ export default function page() {
                 </div>
 
 
-                <div className=" flex sm:flex-col sm:ml-4 sm:justify-end sm:my-2 flex-col mr-1 mt-12">
+                <div className=" flex sm:flex-col sm:ml-4 sm:justify-end sm:my-2 flex-col mr-1 justify-center mb-10">
                     <div className="font-poppins">
                         <p className="font-poppins font-semibold text-xs ">Narikela 1 ltr Coconut Oil</p>
                         <h6 className="font-[1px] sm:text-[7px] text-[5px]">MRP INCLUSIVE OF ALL TAXES</h6>
