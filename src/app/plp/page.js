@@ -139,7 +139,7 @@ export default function page() {
                                 </div>
 
                                 <div className="mx-2 sm:hidden block">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mt-2 mx-1">
+                                    <div className="flex gap-2 mt-2 mx-1">
                                         {variant.benefits.slice(0, 2).map((benefit, idx) => (
                                             <div key={idx} className="flex items-center text-start font-thin text-xs text-[#1B2F1F]">
                                                 <img src={variant.icon} alt="" className="w-2 h-2 mr-2" />
