@@ -47,8 +47,8 @@ export default function page() {
 
             <div className="flex sm:justify-center sm:flex-row  justify-center">
 
-                <div className="flex sm:flex-row  flex-col">
-                    <div className="drop-shadow-2xl sm:w-[435px] w-[290px]">
+                <div className="flex sm:flex-row  flex-col ">
+                    <div className="drop-shadow-2xl sm:w-[435px] w-[265px] ml-2">
                         <img className="  " src={pdp[0].main} alt="" />
                     </div>
 
@@ -60,8 +60,8 @@ export default function page() {
                 </div>
 
 
-                <div className=" flex sm:flex-col sm:ml-4 sm:justify-end sm:my-2 flex-col justify-end mb-2 " >
-                    <div className="font-poppins">
+                <div className=" flex sm:flex-col sm:ml-4 sm:justify-end sm:my-2 flex-col justify-end mb-2  " >
+                    <div className="font-poppins mr-2">
                         <p className="font-poppins font-semibold sm:text-xs text-[10px]">Narikela 1 ltr Coconut Oil</p>
                         <h6 className="font-[1px] sm:text-[7px] text-[5px]">MRP INCLUSIVE OF ALL TAXES</h6>
                         <div className="flex ">
@@ -69,7 +69,7 @@ export default function page() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col  text-sm border border-gray-900 i pl-2 pt-2 pb-2 shadow-lg drop-shadow-2xl border-opacity-30 rounded-sm sm:w-40 w-28 font-poppins">
+                    <div className="flex flex-col  text-sm border border-gray-900 i pl-2 pt-2 pb-2 shadow-lg drop-shadow-2xl border-opacity-30 rounded-sm sm:w-40 w-28 font-poppins mr-2">
                         <div className="flex pb-2  ">
                             <img className="sm:w-5 sm:h-4 w-4 h-3  mt-1" src="/image/pdp/verified.png" alt="" />
                             <p className="sm:pl-2 pl-1 text-[#593B1F] sm:text-sm text-[10px] "> 100% </p>
