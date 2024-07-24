@@ -242,21 +242,32 @@ export const ingredients = [
 ]
 
 export const use1 = [{
-  use: "/image/pdp/skincare.png"
+  use: "/image/pdp/skincare.png",
+  name: "Moisturizes Skin"
 
 }, {
-  use: "/image/pdp/healthy.png"
+  use: "/image/pdp/healthy.png",
+  name: "Nourishes Hair "
+
 
 }, {
-  use: "/image/pdp/immunity.png"
+  use: "/image/pdp/immunity.png",
+  name: "Boosts Immunity "
+
 }]
 
 export const use2 = [{
-  use: "/image/pdp/stamina.png"
+  use: "/image/pdp/stamina.png",
+  name: "Boosts Energy "
+
 
 }, {
-  use: "/image/pdp/digestion.png"
+  use: "/image/pdp/digestion.png",
+  name: "Improves Metabolism"
+
 
 }, {
-  use: "/image/pdp/saturated.png"
+  use: "/image/pdp/saturated.png",
+  name: "Reduces Bad Cholesterol "
+
 }]
