@@ -3,12 +3,43 @@
 import Header from "@/app/components/Header/Header";
 import React, { useEffect, useState } from "react";
 import { coconutData, pdp, keyFeature, ingredients, use1, use2 } from "@/coconut-oil";
-import AwesomeSlider from "react-awesome-slider";
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+//  
+
+// import required modules
+// import { Navigation } from 'swiper/modules'; 
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+};
+
+const images = [
+    { src: 'path_to_image1.png', alt: 'Image 1' },
+    { src: 'path_to_image2.png', alt: 'Image 2' },
+    { src: 'path_to_image3.png', alt: 'Image 3' }
+];
 
 export default function page() {
     const [screenWidth, setScreenWidth] = useState(null);
     const [mobileMenu, setMobileMenu] = useState(false);
+    const [currentImage, setCurrentImage] = useState(pdp[0].main)
 
     console.log("use1", use1);
 
@@ -50,7 +81,7 @@ export default function page() {
 
                 <div className="flex sm:flex-row  flex-col ">
                     <div className="drop-shadow-2xl sm:w-[435px]  ml-2">
-                        <img className="  " src={pdp[0].main} alt="" />
+                        <img className=" w-full " src={currentImage} alt="" />
                     </div>
 
                     <div className=" sm:flex hidden mb-[1px] mt-[1px] drop-shadow-2xl  sm:flex-col">
@@ -95,9 +126,28 @@ export default function page() {
             </div>
 
             <div className=" sm:hidden  sm:mb-[1px] sm:mt-[1px] drop-shadow-2xl flex sm:flex-col mx-auto items-center justify-center ml-1">
-                <img className="sm:w-40 sm:h-36 w-[32.5%] " src={pdp[0].side1} alt="" />
-                <img className="sm:w-40 sm:h-36 w-[32.5%]" src={pdp[0].side2} alt="" />
-                <img className="sm:w-40 sm:h-36 w-[32.5%]" src={pdp[0].side3} alt="" />
+                <Swiper
+                    modules={[Pagination]}
+                    spaceBetween={7}
+                    slidesPerView={3}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                >
+                    <SwiperSlide >
+                        <img onClick={() => setCurrentImage(pdp[0].side1)} className="w-full h-auto" src={pdp[0].side1} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img onClick={() => setCurrentImage(pdp[0].side2)} className="w-full h-auto" src={pdp[0].side2} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img onClick={() => setCurrentImage(pdp[0].side3)} className="w-full h-auto" src={pdp[0].side3} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img onClick={() => setCurrentImage(pdp[0].main)} className="w-full h-auto" src={pdp[0].side3} alt="" />
+                    </SwiperSlide>
+                </Swiper>
             </div>
 
 
@@ -121,31 +171,7 @@ export default function page() {
             </div>
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]"> Key Features Of Our Products</div>
 
-            {/* 
-            <div className="flex flex-col bg-[#EBEAD5] sm:w-4/5 w-5/6 mx-auto border border-[#593B1F] border-opacity-40 drop-shadow-xl">
-                <div className="flex justify-evenly py-4 mx-auto w-full ">
-                    {use1?.map((k, index) => (
-                        <div className="flex flex-col items-center"><img
-                            className="w-24 bg-[#D1B87A] h-24 p-4 rounded-full"
-                            key={index}
-                            src={k.use}
-                            alt="image not here" />
-                            <p>{k.name}</p>
-                        </div>
-                    ))}
-                </div>
 
-                <div className="flex justify-evenly mx-auto w-full py-4">
-                    {use2?.map((k, index) => (
-                        <div className="flex flex-col items-center"><img
-                            className="w-24 bg-[#D1B87A] h-24 p-4 rounded-full"
-                            key={index}
-                            src={k.use}
-                            alt="image not here" /><p>{k.name}</p></div>
-
-                    ))}
-                </div>
-            </div> */}
             <div className=" sm:w-4/5  mx-auto  flex justify-center">
                 <img className=" sm:w-6/7  w-[94%] mt-2" src="/image/pdp/group.png" alt="" />
             </div>
@@ -159,20 +185,37 @@ export default function page() {
                     <img className="sm:w-1/4   w-[32%]" key={index} src={k.ingredients} alt="image not here" />
                 ))}
             </div>
-            {/* <div className='relative w-1/2 h-1/2 mx-auto z-10 my-auto '>
-                <AwesomeSlider mobileTouch={true} infinite={true} >
-                    <div className="w-full h-1/2">
-                        <img className="w-full h-full object-cover " src="/image/banner/coconutbanner2.jpg" alt="Coconut Banner 2" />
-                    </div>
-                    <div className="w-full h-1/2">
-                        <img className="w-full h-full object-cover" src="/image/banner/coconutbanner4.jpg" alt="Coconut Banner 4" />
-                    </div>
-                    <div className="w-full h-1/2">
-                        <img className="w-full h-full object-cover" src="/image/banner/coconutbanner5.jpg" alt="Coconut Banner 5" />
-                    </div>
-                </AwesomeSlider>
-            </div> */}
 
+
+
+
+
+
+            <div className="sm:hidden">
+                <Swiper
+                    modules={[Pagination]}
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                        el: '.custom-pagination',
+                    }}
+                >
+                    <SwiperSlide>
+                        <img className="w-full h-auto" src={pdp[0].side1} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className="w-full h-auto" src={pdp[0].side2} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className="w-full h-auto" src={pdp[0].side3} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className="w-full h-auto" src={pdp[0].side3} alt="" />
+                    </SwiperSlide>
+                </Swiper>
+            </div>
         </div >
     );
 }
