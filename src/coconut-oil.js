@@ -224,6 +224,10 @@ export const keyFeature = [
     key: "/image/pdp/keyF3.png",
 
   }
+  , {
+    key: "/image/pdp/keyF3.png",
+
+  }
 
 
 ]
@@ -239,9 +243,10 @@ export const ingredients = [
   }, {
     ingredients: "/image/pdp/ingredients3.png",
 
-  }
-
-
+  },
+  {
+    ingredients: "/image/pdp/ingredients1.png",
+  },
 ]
 
 export const use1 = [{

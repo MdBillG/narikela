@@ -163,11 +163,33 @@ export default function page() {
 
             </div>
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]">Why Use Narikela Coconut Oil?</div>
-
+            {/* 
             <div className="flex mx-auto justify-center">
                 {keyFeature.map((k, index) => (
                     <img className="sm:w-1/4  w-[32%] mt-2" key={index} src={k.key} alt="image not here" />
                 ))}
+            </div> */}
+            <div className="flex mx-auto justify-center">
+                <Swiper
+                    modules={[Pagination]}
+                    spaceBetween={7}
+                    slidesPerView={3}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                >
+                    {keyFeature?.map((k, index) => (
+                        <SwiperSlide key={index}>
+                            <img
+                                // onClick={() => setCurrentImage(pdp[0].side1)}
+                                className="w-full h-auto"
+                                src={k.key}
+                                alt={`Ingredient ${index + 1}`}
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]"> Key Features Of Our Products</div>
 
@@ -178,44 +200,53 @@ export default function page() {
 
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]"> Ingredients Used For Production</div>
 
-
-
-            <div className="flex mx-auto justify-center">
+            {/* <div className="flex mx-auto justify-center">
                 {ingredients?.map((k, index) => (
-                    <img className="sm:w-1/4   w-[32%]" key={index} src={k.ingredients} alt="image not here" />
+                    <>
+                    <img className="sm:w-1/4   w-[32%]" key={index} src={k.ingredients} alt="image not here" /><div className="">
+                        <Swiper
+                            modules={[Pagination]}
+                            spaceBetween={7}
+                            slidesPerView={3}
+                            loop={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                        >
+                            <SwiperSlide>
+                                <img onClick={() => setCurrentImage(pdp[0].side1)} className="w-full h-auto" src={k.ingredients} alt="" />
+                            </SwiperSlide>
+
+                        </Swiper>
+                    </div></>
                 ))}
-            </div>
 
 
-
-
-
-
-            <div className="sm:hidden">
+            </div> */}
+            <div className="flex mx-auto justify-center">
                 <Swiper
                     modules={[Pagination]}
-                    spaceBetween={20}
+                    spaceBetween={7}
                     slidesPerView={3}
                     loop={true}
                     pagination={{
                         clickable: true,
-                        el: '.custom-pagination',
                     }}
                 >
-                    <SwiperSlide>
-                        <img className="w-full h-auto" src={pdp[0].side1} alt="" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img className="w-full h-auto" src={pdp[0].side2} alt="" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img className="w-full h-auto" src={pdp[0].side3} alt="" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img className="w-full h-auto" src={pdp[0].side3} alt="" />
-                    </SwiperSlide>
+                    {ingredients?.map((k, index) => (
+                        <SwiperSlide key={index}>
+                            <img
+                                // onClick={() => setCurrentImage(pdp[0].side1)}
+                                className="w-full h-auto"
+                                src={k.ingredients}
+                                alt={`Ingredient ${index + 1}`}
+                            />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
+
+
         </div >
     );
 }
