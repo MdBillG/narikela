@@ -59,7 +59,7 @@ export default function page() {
 
     const data =
         product === "all"
-            ? [...coconutOilVariants, ...DesssicatePowder]
+            ? [...coconutOilVariants]
             : product === "coconutOilVariants"
                 ? coconutOilVariants
                 : DesssicatePowder;

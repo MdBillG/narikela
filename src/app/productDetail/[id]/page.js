@@ -18,33 +18,41 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-//  
+import '../../components/Cards/slider.css'
+import { useParams } from "next/navigation";
 
-// import required modules
-// import { Navigation } from 'swiper/modules'; 
-const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-};
-
-const images = [
-    { src: 'path_to_image1.png', alt: 'Image 1' },
-    { src: 'path_to_image2.png', alt: 'Image 2' },
-    { src: 'path_to_image3.png', alt: 'Image 3' }
-];
 
 export default function page() {
-    const [screenWidth, setScreenWidth] = useState(null);
-    const [mobileMenu, setMobileMenu] = useState(false);
     const [currentImage, setCurrentImage] = useState(pdp[0].main)
+    const { id } = useParams()
+    const [size, setSize] = useState("")
+    const [price, setPrice] = useState("")
+    const [name, setName] = useState("")
 
-    console.log("use1", use1);
+    console.log("size", size)
+    console.log("coconutData", coconutData)
+    console.log("params", id)
 
-    console.log("use2", use2);
+    const presentId = coconutData[0].coconut[0].variants.filter((i) => i.id === id);
 
+
+
+    console.log("presentItem", presentId)
+
+    useEffect(() => {
+        const newProducts = presentId.map((details) => ({
+            id: details.id,
+            mrp: setPrice(details.mrp),
+            name: setName(details.name),
+            size: setSize(details.size),
+        }));
+
+    }, [presentId]);
+
+
+
+
+    // debugger
     return (
         <div className="">
             <div className="relative">
@@ -91,13 +99,13 @@ export default function page() {
                     </div>
                 </div>
 
-
+                {/* 
                 <div className=" flex sm:flex-col sm:ml-4 sm:justify-end sm:my-2 flex-col justify-end mb-2  " >
                     <div className="font-poppins mr-2">
-                        <p className="font-poppins font-semibold sm:text-xs text-[10px]">Narikela 1 ltr Coconut Oil</p>
+                        <p className="font-poppins font-semibold sm:text-xs text-[10px]">{name}</p>
                         <h6 className="font-[1px] sm:text-[7px] text-[5px]">MRP INCLUSIVE OF ALL TAXES</h6>
                         <div className="flex ">
-                            <img className="w-4 h-4 mt-1" src="/image/pdp/currencylogo.png" alt="" /> <p>499</p>
+                            <img className="w-4 h-4 mt-1" src="/image/pdp/currencylogo.png" alt="" /> <p>{price}</p>
                         </div>
                     </div>
 
@@ -120,7 +128,7 @@ export default function page() {
                     </div>
 
                     <button className="bg-[#D1B87A] text-[#1B2F1F] font-poppins rounded-md sm:w-40 w-28 py-2 mt-2 drop-shadow-lg">Order Now</button>
-                </div>
+                </div> */}
 
 
             </div>
@@ -131,6 +139,7 @@ export default function page() {
                     spaceBetween={7}
                     slidesPerView={3}
                     loop={true}
+                    cssMode={true}
                     pagination={{
                         clickable: true,
                     }}
@@ -155,7 +164,7 @@ export default function page() {
                 <h1 className="sm:w-4/5 w-[93%] sm:mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins border-b border-[#593B1F] mx-auto">Product Description</h1>
 
                 <div className="sm:w-4/5 w-[93%] mx-auto my-2 font-poppins ">
-                    <div className="flex gap-1 sm:text-xl text-xs"><p className=" sm:text-xl font-medium text-[#1B2F1F] text-xs ">Size :</p><p className="mt-[3px] sm:text-xl text-xs"> 1ltr -1000ml</p></div>
+                    <div className="flex gap-1 sm:text-xl text-xs"><p className=" sm:text-xl font-medium text-[#1B2F1F] text-xs ">Size :</p><p className="mt-[3px] sm:text-xl text-xs"> {size}</p></div>
                     <div className="flex gap-1 sm:text-xl text-xs"><p className="sm:text-xl font-medium text-[#1B2F1F]  text-xs">Used For :</p> <p className="mt-[3px] sm:text-xl text-xs">Cooking oil, Body Lotion, Hair Oil</p></div>
                     <p className="text-[#1B2F1F] sm:text-xl text-xs ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sunt iure quam illum nobis, modi suscipit assumenda alias. Voluptates quidem quod nesciunt id quae labore non sequi? Odit, magnam velit?</p>
 
@@ -163,13 +172,15 @@ export default function page() {
 
             </div>
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]">Why Use Narikela Coconut Oil?</div>
-            {/* 
-            <div className="flex mx-auto justify-center">
-                {keyFeature.map((k, index) => (
-                    <img className="sm:w-1/4  w-[32%] mt-2" key={index} src={k.key} alt="image not here" />
-                ))}
-            </div> */}
-            <div className="flex mx-auto justify-center">
+            <div className="sm:block hidden  ">
+                <div className="flex  justify-center-center mx-auto  sm:w-4/5 ">
+                    {keyFeature.map((k, index) => (
+                        <img className="sm:w-1/4  w-[32%] mt-2" key={index} src={k.key} alt="image not here" />
+                    ))}
+                </div>
+            </div>
+
+            <div className="flex mx-auto justify-center sm:hidden ">
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={7}
@@ -177,7 +188,9 @@ export default function page() {
                     loop={true}
                     pagination={{
                         clickable: true,
+
                     }}
+
                 >
                     {keyFeature?.map((k, index) => (
                         <SwiperSlide key={index}>
@@ -200,30 +213,17 @@ export default function page() {
 
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]"> Ingredients Used For Production</div>
 
-            {/* <div className="flex mx-auto justify-center">
-                {ingredients?.map((k, index) => (
-                    <>
-                    <img className="sm:w-1/4   w-[32%]" key={index} src={k.ingredients} alt="image not here" /><div className="">
-                        <Swiper
-                            modules={[Pagination]}
-                            spaceBetween={7}
-                            slidesPerView={3}
-                            loop={true}
-                            pagination={{
-                                clickable: true,
-                            }}
-                        >
-                            <SwiperSlide>
-                                <img onClick={() => setCurrentImage(pdp[0].side1)} className="w-full h-auto" src={k.ingredients} alt="" />
-                            </SwiperSlide>
 
-                        </Swiper>
-                    </div></>
-                ))}
+            <div className="sm:block hidden">
+                <div className="flex mx-auto justify-center sm:w-4/5">
+                    {ingredients?.map((k, index) => (
+                        <img className="sm:w-1/4   w-[32%]" key={index} src={k.ingredients} alt="image not here" />
+                    ))}
+                </div>
+            </div>
 
 
-            </div> */}
-            <div className="flex mx-auto justify-center">
+            <div className="flex mx-auto justify-center sm:hidden">
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={7}

@@ -22,7 +22,7 @@ export default function Content() {
                 <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] mr-3" onClick={() => router.push("/about")}>
                     About Us
                 </button>
-                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] mr-3" onClick={handleClick}>
+                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] mr-3" onClick={() => router.push('/plp')}>
                     Products
                 </button>
                 <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] mr-3" onClick={() => router.push('/blogs')}>

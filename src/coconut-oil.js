@@ -10,8 +10,8 @@ export const coconutData = [
         ],
         variants: [
           {
-            id: 1,
-            size: "1 ltr",
+            id: "1",
+            size: "1ltr -1000ml",
             mainImage: "/image/plp/oil1.png",
             name: "Narikela 1 Ltr Coconut Oil",
             icon: "/image/plp/Ellipse.png",
@@ -39,8 +39,8 @@ export const coconutData = [
             sellingPrice: 225,
           },
           {
-            id: 500,
-            size: "500 ml",
+            id: "500",
+            size: "1/2ltr-500ml",
             mainImage: "/image/plp/oil500.png",
             name: "Narikela 1/2 Ltr Coconut Oil",
             icon: "/image/plp/Ellipse.png",
@@ -67,8 +67,8 @@ export const coconutData = [
 
           },
           {
-            id: 250,
-            size: "250 ml (Pack of 3)",
+            id: "250",
+            size: "1/4ltr-250 ml ",
             mainImage: "/image/plp/oil250.png",
             name: "Narikela 1/4 Ltr Coconut Oil",
             icon: "/image/plp/Ellipse.png",
@@ -92,6 +92,24 @@ export const coconutData = [
             ],
             mrp: 70,
             sellingPrice: 65,
+          },
+
+          {
+            id: "22",
+            mainImage: "/image/plp/dpowder.png",
+            size: '500 grams',
+            mrp: 330,
+            sellingPrice: 310,
+            name: "Dessicated Coconut Powder",
+            icon: "/image/plp/Ellipse.png",
+            benefits: [
+              "Moisturizes Skin",
+              "Nourishes Hair",
+              "Boosts Energy",
+              "Boosts Immunity",
+              "Improves Metabolism",
+              "Reduces Bad Cholesterol"
+            ],
           },
           // {
           //   "id": 5,
@@ -170,14 +188,14 @@ export const fourCards = [
         mrp: 210,
         sellingPrice: 195,
       },
-      {
-        id: "D1",
-        size: "250 ml (Pack of 3)",
-        name: "Dessicated Powder",
-        mainImage: "/image/4cards/four4.png",
-        mrp: 210,
-        sellingPrice: 195,
-      },
+      // {
+      //   id: "D1",
+      //   size: "250 ml (Pack of 3)",
+      //   name: "Dessicated Powder",
+      //   mainImage: "/image/4cards/four4.png",
+      //   mrp: 210,
+      //   sellingPrice: 195,
+      // },
     ],
   },
 ];
