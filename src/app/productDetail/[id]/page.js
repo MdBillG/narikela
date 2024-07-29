@@ -128,7 +128,8 @@ export default function page() {
                     </div>
 
                     <button className="bg-[#D1B87A] text-[#1B2F1F] font-poppins rounded-md sm:w-40 w-28 py-2 mt-2 drop-shadow-lg">Order Now</button>
-                </div> */}
+                </div> 
+                */}
 
 
             </div>
