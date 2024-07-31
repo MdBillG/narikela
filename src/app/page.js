@@ -15,7 +15,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import Footer from "./components/Footer/Footer";
 import Instagram from "./components/Cards/instagram";
-import Youtube from "./components/youtube/youtube";
+import Youtube from "./components/youtube/Tube";
 
 
 export default function Home() {
