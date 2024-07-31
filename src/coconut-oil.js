@@ -165,7 +165,7 @@ export const fourCards = [
   {
     variants: [
       {
-        id: 1,
+        id: "1",
         size: "1 ltr",
         name: "Narikela 1ltr",
         mainImage: "/image/4cards/four1.png",
@@ -173,7 +173,7 @@ export const fourCards = [
         sellingPrice: 225,
       },
       {
-        id: 500,
+        id: "500",
         size: "500 ml",
         name: "Narikela 1/2ltr",
         mainImage: "/image/4cards/four2.png",
@@ -181,12 +181,30 @@ export const fourCards = [
         sellingPrice: 120,
       },
       {
-        id: 250,
+        id: "250",
         size: "250 ml (Pack of 3)",
         name: "Narikela 1/4ltr",
         mainImage: "/image/4cards/four3.png",
         mrp: 210,
         sellingPrice: 195,
+      },
+
+      {
+        id: "22",
+        mainImage: "/image/plp/dpowder.png",
+        size: '500 grams',
+        mrp: 330,
+        sellingPrice: 310,
+        name: "Dessicated Coconut Powder",
+        // icon: "/image/plp/Ellipse.png",
+        // benefits: [
+        //   "Moisturizes Skin",
+        //   "Nourishes Hair",
+        //   "Boosts Energy",
+        //   "Boosts Immunity",
+        //   "Improves Metabolism",
+        //   "Reduces Bad Cholesterol"
+        // ],
       },
       // {
       //   id: "D1",

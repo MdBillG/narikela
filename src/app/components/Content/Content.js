@@ -42,9 +42,9 @@ export default function Content() {
 
             <>
 
-                <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] sm:hidden block" onClick={handleClick}>
+                {/* <button className="text-xl subpixel-antialiased text-[rgb(186,129,75)] sm:hidden block" onClick={handleClick}>
                     Products
-                </button >
+                </button > */}
 
             </>
 

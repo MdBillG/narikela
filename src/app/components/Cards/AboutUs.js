@@ -88,7 +88,7 @@ export default function AboutUs() {
                                         sun-ripened coconut is handpicked and cold-pressed to preserve its
                                         natural richness, ensuring the highest quality coconut oil
                                     </p>
-                                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors ">
+                                    <button className=" bg-[#D1B87A] text-[#1B2F1F] sm:px-4 sm:py-2 rounded font-poppins ">
                                         Know More
                                     </button>
                                 </div>
@@ -96,7 +96,7 @@ export default function AboutUs() {
 
                                     <div className="grid grid-cols-2 gap-1 sm:gap-2 px-2 sm:px-4 my-2 sm:my-4">
                                         <img
-                                            className="w-full h-24 sm:h-40 md:h-52 object-cover 
+                                            className="w-full h-28 sm:h-40 md:h-52 object-cover 
                     rounded-tl-sm sm:rounded-tl-md 
                     rounded-es-[40px] sm:rounded-es-[60px] md:rounded-es-[80px] 
                     rounded-se-[40px] sm:rounded-se-[60px] md:rounded-se-[80px]"
@@ -104,7 +104,7 @@ export default function AboutUs() {
                                             alt="Card 1"
                                         />
                                         <img
-                                            className="w-full h-24 sm:h-40 md:h-52 object-cover 
+                                            className="w-full h-28 sm:h-40 md:h-52 object-cover 
                     rounded-tr-sm sm:rounded-tr-md 
                     rounded-br-[40px] sm:rounded-br-[60px] md:rounded-br-[80px] 
                     rounded-tl-[40px] sm:rounded-tl-[60px] md:rounded-tl-[80px]"
@@ -112,7 +112,7 @@ export default function AboutUs() {
                                             alt="Card 2"
                                         />
                                         <img
-                                            className="w-full h-24 sm:h-40 md:h-52 object-cover 
+                                            className="w-full h-28 sm:h-40 md:h-52 object-cover 
                     rounded-bl-sm sm:rounded-bl-md 
                     rounded-br-[40px] sm:rounded-br-[60px] md:rounded-br-[80px] 
                     rounded-tl-[40px] sm:rounded-tl-[60px] md:rounded-tl-[80px]"
@@ -120,7 +120,7 @@ export default function AboutUs() {
                                             alt="Card 3"
                                         />
                                         <img
-                                            className="w-full h-24 sm:h-40 md:h-52 object-cover 
+                                            className="w-full h-28 sm:h-40 md:h-52 object-cover 
                     rounded-br-sm sm:rounded-br-md 
                     rounded-es-[40px] sm:rounded-es-[60px] md:rounded-es-[80px] 
                     rounded-se-[40px] sm:rounded-se-[60px] md:rounded-se-[80px]"

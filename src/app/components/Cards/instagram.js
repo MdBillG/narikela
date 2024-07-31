@@ -1,5 +1,11 @@
 import React from "react";
 import { instagram } from "@/coconut-oil";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 
 const Instagram = () => {
     return (
@@ -8,7 +14,7 @@ const Instagram = () => {
                 <h1 className='font-cormorant text-[#593B1F] font-normal sm:text-3xl text-center mb-6 italic text-xl'>
                     BE PART OF OUR INSTAGRAM FAMILY
                 </h1>
-                <div className="flex flex-wrap justify-center gap-4 ">
+                <div className=" flex-wrap justify-center gap-4 sm:flex hidden ">
                     {instagram[0].images.map((image, index) => (
                         <><a href={image.link}>
                             <div key={index} className="sm:w-auto border border-[#D1B87A]">
@@ -20,6 +26,31 @@ const Instagram = () => {
                         </a></>
                     ))}
                 </div>
+
+                <div className="flex mx-auto justify-center sm:hidden  ">
+                    <Swiper
+                        modules={[Pagination]}
+                        spaceBetween={7}
+                        slidesPerView={2}
+                        loop={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                    >
+                        {instagram[0].images.map((image, index) => (
+                            <SwiperSlide key={index}>
+                                <img
+                                    // onClick={() => setCurrentImage(pdp[0].side1)}
+                                    className="w-full h-auto"
+                                    src={image.image}
+                                    alt={`Instagram image ${index + 1}`}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+
+
             </div>
         </>
     );

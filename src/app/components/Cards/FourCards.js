@@ -39,11 +39,11 @@ export default function FourCards() {
                 ))}
             </div> */}
 
-            <div className="grid grid-cols-2 md:grid-cols-4  gap-3  p-2 mx-4 md:mx-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2  gap-3  p-2 mx-auto w-[70%]">
                 {fourCards[0]?.variants?.map((num) => (
                     <div key={num} className="relative" onClick={() => router.push(`/productDetail/${num?.id}`)}>
                         <img
-                            className="w-full sm:h-64  h-75 object-cover rounded-md"
+                            className="w-full sm:h-full  sm:h-75  object-cover rounded-md"
                             src={num?.mainImage}
                             alt={`Card ${num}`}
                         />
