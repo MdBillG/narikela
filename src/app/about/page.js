@@ -1,10 +1,22 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 
 const About = () => {
+    const [count, setCount] = useState(0)
+    const target = 250
+    const incrementSpeed = 30
+
+    useEffect(() => {
+        if (count < target) {
+            const timer = setTimeout(() => {
+                setCount(count + 1)
+            }, incrementSpeed)
+            return () => clearTimeout(timer)
+        }
+    }, [count])
+
     return (
         <>
-
-
             <div className="grid sm:grid-cols-2 grid-cols-1 sm:mx-16 sm:my-10 mt-4 ">
                 <div className="relative mx-7">
                     <img
@@ -39,18 +51,18 @@ const About = () => {
                         Richness, Ensuring The Highest Quality Coconut Oil
                     </p>
 
-                    <div className="flex flex-row gap-3 font-cormorant text-[#593B1F] italic font-semibold mt-4 ">
-                        <div className="flex flex-row   rounded-r drop-shadow-lg  border border-[#D1B87A] border-l-2 h-14 items-center justify-center w-40 border-l-[#593B1F] ">
+                    <div className="flex sm:flex-row flex-col gap-3 font-cormorant text-[#593B1F] italic font-semibold mt-4 items-center ">
+                        <div className="flex flex-row rounded-r drop-shadow-lg  border border-[#D1B87A] border-l-2 h-14 items-center justify-center w-40 border-l-[#593B1F]  animate__animated animate__backInLeft ">
                             <img className="w-10 h-7 ml-2" src="icons/since.png" alt="" />
-                            <p className="sm:text-lg text-sm mr-1">Since</p>{" "}
+                            <p className="sm:text-lg text-sm mr-1">Since</p>
                             <p className="sm:text-sm text-xs pt-[5px]"> 2023</p>
                         </div>
 
-                        <div className="flex flex-row    rounded-r drop-shadow-xl border border-[#D1B87A] border-l-2 items-center justify-center w-60 border-l-[#593B1F] ">
+                        <div className="flex flex-row rounded-r drop-shadow-xl border border-[#D1B87A] border-l-2 items-center justify-center w-60 border-l-[#593B1F] h-12 sm:h-14 animate__animated animate__backInRight">
                             <img className="w-10 h-7 ml-2" src="icons/happy.png" alt="" />
                             <p className="sm:text-sm text-xs pt-[5px] font-semibold mr-2">
-                                250+
-                            </p>{" "}
+                                {count}+
+                            </p>
                             <p className="sm:text-lg text-sm "> Happy Customers</p>
                         </div>
                     </div>
@@ -198,7 +210,7 @@ const About = () => {
                     <h2 className="text-[#593B1F] font-medium text-2xl italic sm:block hidden">
                         MEET THE VISIONARY
                     </h2>
-                    <h1 className="sm:text-[#1B2F1F] sm:font-medium sm:text-3xl sm:mt-3 sm:text-start text-center font-medium text-xl text-[#593B1F] py-2 ">
+                    <h1 className="sm:text-[#1B2F1F] sm:font-medium sm:text-3xl sm:mt-3 sm:text-start text-center font-medium text-xl text-[#593B1F] py-2 animate__animated animate__backInDown">
                         Kaivalya K Mithra
                     </h1>
                     <p className="sm:text-[#000000] text-sm font-poppins sm:mt-5 text-[#593B1F] sm:text-start text-center pb-2 px-2">

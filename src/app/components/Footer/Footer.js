@@ -49,7 +49,7 @@ const Footer = () => {
                             </a>
                         </div>
                         <div className="mt-3 sm:mt-0" >
-                            <div className="flex "> <img className="h-6" src="/icons/footer/call.png" alt="" /><p className="ml-1">9148633721</p> </div>
+                            <div className="flex "> <img className="h-6" src="/icons/footer/call.png" alt="" /><p className="ml-1">+91-9148633721</p> </div>
                             <div className="flex mt-1"> <img className="h-6" src="/icons/footer/mail.png" alt="" /><p className="ml-1">narikela.tiptur@gmail.com</p> </div>
                             <div className="flex mt-1"> <img className="h-6" src="/icons/footer/distance.png" alt="" /><p className="ml-1"> Vinayaka Nagara, Tiptur Tumkur district-572201</p> </div>
                         </div>

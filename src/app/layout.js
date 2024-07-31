@@ -3,6 +3,7 @@ import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import 'animate.css';
 
 const inter = Montserrat({ subsets: ["latin"] });
 
