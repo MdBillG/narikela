@@ -6,12 +6,26 @@ const Youtube = () => {
     return (
         <div>
             This is youtube vide
+            <div className='sm:block hidden'>
 
-            <iframe
-                src="https://www.youtube.com/embed/gfU1iZnjRZM"
-                frameborder="0"
-                allowfullscreen
-            />
+                <iframe
+                    src="https://www.youtube.com/embed/VX9nJFQlumw"
+                    width={"100%"}
+                    height={"500px"}
+                    frameborder="0"
+                    allowfullscreen
+                />
+            </div>
+            <div className='sm:hidden block'>
+
+                <iframe
+                    src="https://www.youtube.com/embed/VX9nJFQlumw"
+                    width={"100%"}
+                    height={"300px"}
+                    frameborder="0"
+                    allowfullscreen
+                />
+            </div>
         </div>
     )
 }
