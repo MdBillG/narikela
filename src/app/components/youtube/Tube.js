@@ -5,7 +5,6 @@ const Youtube = () => {
     const embedUrl = `https://www.youtube.com/watch?v=VX9nJFQlumw&ab_channel=KaivalyaMithra`;
     return (
         <div>
-            This is youtube vide
             <div className='sm:block hidden'>
 
                 <iframe
