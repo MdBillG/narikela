@@ -28,15 +28,16 @@ export default function page() {
     const [size, setSize] = useState("")
     const [price, setPrice] = useState("")
     const [name, setName] = useState("")
+    const [product, setProduct] = useState("all");
 
     console.log("size", size)
     console.log("coconutData", coconutData)
     console.log("params", id)
 
     const presentId = coconutData[0].coconut[0].variants.filter((i) => i.id === id);
-
-
-
+    const handleClick = () => {
+        window.open('http://wa.me/c/919148633721', '_blank');
+    };
     console.log("presentItem", presentId)
 
     useEffect(() => {
@@ -49,6 +50,38 @@ export default function page() {
 
     }, [presentId]);
 
+
+    const coconutOilVariants = coconutData[0].coconut[0]?.variants?.map(
+        (variant) => ({
+            mrp: variant.mrp,
+            id: variant.id,
+            sellingPrice: variant?.sellingPrice,
+            mainImage: variant?.mainImage,
+            name: variant?.name,
+            icon: variant.icon,
+            benefits: variant?.benefits,
+            sellingPrice: variant?.sellingPrice,
+        })
+    );
+
+    const DesssicatePowder = coconutData[0].DesssicatePowder[0]?.variants?.map(
+        (variant) => ({
+            id: variant.id,
+            mainImage: variant?.image,
+            name: variant?.name,
+            icon: variant.icon,
+            benefits: variant?.benefits,
+            mrp: variant?.mrp,
+            sellingPrice: variant?.sellingPrice,
+        })
+    );
+
+    const data = [...coconutOilVariants, ...DesssicatePowder]
+
+
+    const firstVariant = data?.[0] || {};
+    const benefits = firstVariant.benefits || [];
+    const icon = firstVariant.icon;
 
 
 
@@ -99,8 +132,8 @@ export default function page() {
                     </div>
                 </div>
 
-                {/* 
-                <div className=" flex sm:flex-col sm:ml-4 sm:justify-end sm:my-2 flex-col justify-end mb-2  " >
+
+                <div className=" flex sm:flex-col sm:ml-4 sm:justify-end sm:my-2 flex-col justify-end mb-2 sm:flex hidden " >
                     <div className="font-poppins mr-2">
                         <p className="font-poppins font-semibold sm:text-xs text-[10px]">{name}</p>
                         <h6 className="font-[1px] sm:text-[7px] text-[5px]">MRP INCLUSIVE OF ALL TAXES</h6>
@@ -127,9 +160,9 @@ export default function page() {
                         </div>
                     </div>
 
-                    <button className="bg-[#D1B87A] text-[#1B2F1F] font-poppins rounded-md sm:w-40 w-28 py-2 mt-2 drop-shadow-lg">Order Now</button>
-                </div> 
-                */}
+                    <button className="bg-[#D1B87A] text-[#1B2F1F] font-poppins rounded-md sm:w-40 w-28 py-2 mt-2 drop-shadow-lg" onClick={() => handleClick}>Order Now</button>
+                </div>
+
 
 
             </div>
@@ -159,6 +192,55 @@ export default function page() {
                     </SwiperSlide>
                 </Swiper>
             </div>
+
+            <div className=" flex  sm:ml-4  mx-2 flex-col justify-end mb-2 sm:hidden " >
+                <div className="font-poppins mr-2">
+                    <p className="font-poppins font-semibold text-[16px]">{name}</p>
+                    <h6 className="font-[3px]  text-[12px]">MRP INCLUSIVE OF ALL TAXES</h6>
+                    <div className="flex ">
+                        <img className="w-5 h-5 mt-1" src="/image/pdp/currencylogo.png" alt="" /> <p className="text-[20px]">{price}</p>
+                    </div>
+                </div>
+
+                <div className="flex justify-between">
+
+                    {/* <div className="font-poppins  sm:hidden block border border-gray-900 border-opacity-30 rounded-sm w-[50%]">
+                        {benefits.slice(0, 3).map((benefit, idx) => (
+                            <div key={idx} className="flex items-center text-start font-thin text-xs text-[#1B2F1F]">
+                                <img src={icon} alt="" className="w-2 h-2 mr-2" />
+                                <span className="text-[9px] sm:text-xs">{benefit}</span>
+                            </div>
+                        ))}
+                    </div> */}
+                    <div className="flex flex-col  text-sm border border-gray-900  pl-2 pt-2 pb-2 shadow-lg drop-shadow-2xl border-opacity-30 rounded-sm sm:w-40 w-28 font-poppins mr-2">
+                        <div className="flex pb-1  ">
+                            <img className="sm:w-5 sm:h-4 w-4 h-3  mt-1" src="/image/pdp/verified.png" alt="" />
+                            <p className="sm:pl-2 pl-1 text-[#593B1F] sm:text-sm text-[10px] "> 100% </p>
+                            <p className="sm:pl-1  pl-0.5 sm:text-sm text-[10px]">Genuine</p>
+                        </div>
+                        <div className="flex  pb-1 ">
+                            <img className="sm:w-5 sm:h-4 w-4 h-3 mt-1" src="/image/pdp/payment-method 1.png" alt="" />
+                            <p className="sm:pl-2 pl-1  text-[#593B1F]sm:text-sm text-[10px]"> Secure </p>
+                            <p className="sm:pl-1 pl-0.5 sm:text-sm text-[10px]"> Payment</p>
+                        </div>
+                        <div className="flex">
+                            <img className="sm:w-5 sm:h-4 w-4 h-3 mt-1" src="/image/pdp/shipped.png" alt="" />
+                            <p className="sm:pl-2 pl-1 text-[#593B1F] sm:text-sm text-[10px] "> Free </p>{" "}
+                            <p className="sm:pl-1 pl-0.5 sm:text-sm text-[10px]">Shipping</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button
+                    onClick={handleClick}
+                    className="bg-[#D1B87A] text-[#1B2F1F] font-poppins rounded-md sm:w-40 w-28 py-2 mt-2 drop-shadow-lg"
+                >
+                    Order Now
+                </button>
+            </div>
+
+
 
 
             <div className=" sm:my-10 ">
