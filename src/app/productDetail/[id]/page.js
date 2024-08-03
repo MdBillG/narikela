@@ -20,6 +20,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import '../../components/Cards/slider.css'
 import { useParams } from "next/navigation";
+import PdpKeyFeatures from "@/app/components/Cards/PdpKeyFeatures";
 
 
 export default function page() {
@@ -77,15 +78,10 @@ export default function page() {
     );
 
     const data = [...coconutOilVariants, ...DesssicatePowder]
-
-
     const firstVariant = data?.[0] || {};
     const benefits = firstVariant.benefits || [];
     const icon = firstVariant.icon;
 
-
-
-    // debugger
     return (
         <div className="">
             <div className="relative">
@@ -98,7 +94,7 @@ export default function page() {
                         Experience The Natural Goodness
                     </p>
                     <span className="text-xs sm:text-xl text-[#D1B87A] flex">
-                        <a href="" className="mr-1">
+                        <a href="/" className="mr-1">
                             Home
                         </a>
                         <img
@@ -106,7 +102,7 @@ export default function page() {
                             src="/image/blogs/blogline.png"
                             alt=""
                         />
-                        <a href="" className="ml-1">
+                        <a href="/blogs" className="ml-1">
                             Blogs
                         </a>
                     </span>
@@ -193,7 +189,7 @@ export default function page() {
                 </Swiper>
             </div>
 
-            <div className=" flex  sm:ml-4  mx-2 flex-col justify-end mb-2 sm:hidden " >
+            <div className=" flex   mx-2 flex-col  mb-2 sm:hidden " >
                 <div className="font-poppins mr-2">
                     <p className="font-poppins font-semibold text-[16px]">{name}</p>
                     <h6 className="font-[3px]  text-[12px]">MRP INCLUSIVE OF ALL TAXES</h6>
@@ -202,16 +198,16 @@ export default function page() {
                     </div>
                 </div>
 
-                <div className="flex justify-between">
+                <div className="flex ">
 
-                    {/* <div className="font-poppins  sm:hidden block border border-gray-900 border-opacity-30 rounded-sm w-[50%]">
+                    <div className="font-poppins  sm:hidden block  rounded-sm w-[50%]">
                         {benefits.slice(0, 3).map((benefit, idx) => (
-                            <div key={idx} className="flex items-center text-start font-thin text-xs text-[#1B2F1F]">
-                                <img src={icon} alt="" className="w-2 h-2 mr-2" />
+                            <div key={idx} className="flex  text-[#1B2F1F]">
+                                <img src={icon} alt="" className="w-2 h-2 " />
                                 <span className="text-[9px] sm:text-xs">{benefit}</span>
                             </div>
                         ))}
-                    </div> */}
+                    </div>
                     <div className="flex flex-col  text-sm border border-gray-900  pl-2 pt-2 pb-2 shadow-lg drop-shadow-2xl border-opacity-30 rounded-sm sm:w-40 w-28 font-poppins mr-2">
                         <div className="flex pb-1  ">
                             <img className="sm:w-5 sm:h-4 w-4 h-3  mt-1" src="/image/pdp/verified.png" alt="" />
@@ -247,15 +243,18 @@ export default function page() {
                 <h1 className="sm:w-4/5 w-[93%] sm:mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins border-b border-[#593B1F] mx-auto">Product Description</h1>
 
                 <div className="sm:w-4/5 w-[93%] mx-auto my-2 font-poppins ">
-                    <div className="flex gap-1 sm:text-xl text-xs"><p className=" sm:text-xl font-medium text-[#1B2F1F] text-xs ">Size :</p><p className="mt-[3px] sm:text-xl text-xs"> {size}</p></div>
-                    <div className="flex gap-1 sm:text-xl text-xs"><p className="sm:text-xl font-medium text-[#1B2F1F]  text-xs">Used For :</p> <p className="mt-[3px] sm:text-xl text-xs">Cooking oil, Body Lotion, Hair Oil</p></div>
+                    <div className="flex gap-1 sm:text-xl text-xs"><p className=" sm:text-xl font-medium text-[#1B2F1F] text-xs ">Size :</p><p className="mt-[px] sm:text-xl text-xs"> {size}</p></div>
+                    <div className="flex gap-1 sm:text-xl text-xs"><p className="sm:text-xl font-medium text-[#1B2F1F]  text-xs">Used For :</p> <p className="mt-[x] sm:text-xl text-xs">Cooking oil, Body Lotion, Hair Oil</p></div>
                     <p className="text-[#1B2F1F] sm:text-xl text-xs ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sunt iure quam illum nobis, modi suscipit assumenda alias. Voluptates quidem quod nesciunt id quae labore non sequi? Odit, magnam velit?</p>
 
                 </div>
 
             </div>
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]">Why Use Narikela Coconut Oil?</div>
-            <div className="sm:block hidden  ">
+
+
+
+            <div className="sm:block hidden mx-4">
                 <div className="flex  justify-center-center mx-auto  sm:w-4/5 ">
                     {keyFeature.map((k, index) => (
                         <img className="sm:w-1/4  w-[32%] mt-2" key={index} src={k.key} alt="image not here" />
@@ -263,7 +262,7 @@ export default function page() {
                 </div>
             </div>
 
-            <div className="flex mx-auto justify-center sm:hidden ">
+            <div className="flex mx-auto justify-center sm:hidden  w-[93%]  ">
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={7}
@@ -290,9 +289,11 @@ export default function page() {
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]"> Key Features Of Our Products</div>
 
 
-            <div className=" sm:w-4/5  mx-auto  flex justify-center">
+            <div className=" sm:w-4/5  mx-auto  flex justify-center sm:block hidden ">
                 <img className=" sm:w-6/7  w-[94%] mt-2" src="/image/pdp/group.png" alt="" />
             </div>
+
+            <PdpKeyFeatures />
 
             <div className=" sm:w-4/5 w-[93%] mx-auto text-[#1B2F1F] font-semibold sm:text-xl font-poppins my-2 border-b border-[#593B1F]"> Ingredients Used For Production</div>
 
@@ -306,7 +307,8 @@ export default function page() {
             </div>
 
 
-            <div className="flex mx-auto justify-center sm:hidden">
+
+            <div className="flex mx-auto justify-center sm:hidden w-[93%]">
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={7}

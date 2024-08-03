@@ -1,6 +1,14 @@
+'use client'
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const page = () => {
+
+    const pathname = usePathname()
+
+    console.log("pathname", pathname)
+
+
     return (
 
         <div>
@@ -36,7 +44,7 @@ const page = () => {
             <div className="my-12">
 
                 <div className="flex sm:flex-row  flex-col sm:justify-center sm:w-2/3 sm:mx-auto font-cormorant sm:space-x-7 mx-2">
-                    <div className="relative  ">
+                    <div className="relative sm:block hidden  ">
                         <img
                             className=" sm:w-72 h-full rounded-sm"
                             src="/image/blogs/blogmonday.png"
@@ -67,6 +75,24 @@ const page = () => {
                             Pariatur.
                         </p>
                     </div>
+
+                    <div className="relative sm:hidden block  ">
+                        <img
+                            className=" sm:w-72 h-full rounded-sm"
+                            src="/image/blogs/blogmonday.png"
+                            alt="sdddddddd"
+                        />
+                        <span className="flex flex-row absolute bottom-3 bg-[#D1B87A] sm:w-[280px] sm:mx-1 items-center text-[#593B1F] bg-opacity-85 sm:h-10 mx-2  w-40">
+
+                            <p className="ml-2 ">21/10/2023</p>
+                            <img
+                                className="h-6  mt-[1px] ml-3 rounded-sm"
+                                src="/image/blogs/blogline.png "
+                                alt=""
+                            />
+                            <p className="ml-3">Sunday</p>
+                        </span>
+                    </div >
                 </div >
 
                 <div className="sm:flex sm:justify-evenly sm:w-full my-4">

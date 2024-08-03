@@ -98,7 +98,7 @@ export default function page() {
                 <span className=' text-4xl  text-[#1B2F1F] text-center  mt-4'> Experience Purity in Every Drop</span>
             </div>
             <div className="font-poppins mx-3">
-                <div className=" grid grid-cols-2 sm:grid-cols-4 mx-1 gap-3 drop-shadow-2xl my-10  ">
+                <div className=" grid grid-cols-2 sm:grid-cols-2  gap-3 drop-shadow-2xl my-10 sm:w-[60%] mx-auto ">
                     {data?.map((variant, index) => (
                         <div
                             key={variant.id}
@@ -151,7 +151,7 @@ export default function page() {
 
 
                                 <div className="pt-2">
-                                    <button className="  w-[82%] border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F] sm:mx-5  mx-[10%] rounded-md h-8 items-center">
+                                    <button className="  w-[82%] border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F]   mx-[10%] rounded-md h-8 items-center">
                                         View Product
                                     </button>
                                 </div>
