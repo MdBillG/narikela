@@ -15,6 +15,7 @@ export const coconutData = [
             mainImage: "/image/plp/oil1.png",
             name: "Narikela 1 Ltr Coconut Oil",
             icon: "/image/plp/Ellipse.png",
+            secondName: "Narikela1ltr Oil",
             mrp: 250,
             sellingPrice: 225,
             benefits: [
@@ -22,7 +23,6 @@ export const coconutData = [
               "Nourishes Hair",
               "Boosts Energy",
               "Boosts Immunity",
-
               "Improves Metabolism",
               "Reduces Bad Cholesterol"
             ],
@@ -45,6 +45,7 @@ export const coconutData = [
             name: "Narikela 1/2 Ltr Coconut Oil",
             icon: "/image/plp/Ellipse.png",
             mrp: 130,
+            secondName: "Narikela1/2ltr Oil",
             sellingPrice: 120,
             benefits: [
               "Moisturizes Skin",
@@ -72,6 +73,7 @@ export const coconutData = [
             mainImage: "/image/plp/oil250.png",
             name: "Narikela 1/4 Ltr Coconut Oil",
             icon: "/image/plp/Ellipse.png",
+            secondName: "Narikela1/4ltr Oil",
             benefits: [
               "Moisturizes Skin",
               "Nourishes Hair",
@@ -101,6 +103,7 @@ export const coconutData = [
             mrp: 330,
             sellingPrice: 310,
             name: "Dessicated Coconut Powder",
+            secondName: "Dessicated Powder",
             icon: "/image/plp/Ellipse.png",
             benefits: [
               "Moisturizes Skin",
@@ -232,6 +235,39 @@ export const instagram = [
       {
         image: "/image/instagram/instgram3.png",
         link: "https://www.instagram.com/narikela.in/p/C8cdPRYSexc/",
+      },
+    ],
+  },
+];
+
+
+export const HOMEBANNER = [
+  {
+    images: [
+      {
+        image: "/image/banner/banner1l.jpg",
+      },
+      {
+        image: "/image/banner/banner2l.jpg",
+      },
+      {
+        image: "/image/banner/banner3l.jpg",
+      },
+    ],
+  },
+];
+
+export const HOMEBANNERM = [
+  {
+    images: [
+      {
+        image: "/image/banner/banner1m.jpg",
+      },
+      {
+        image: "/image/banner/banner2m.jpg",
+      },
+      {
+        image: "/image/banner/banner3m.jpg",
       },
     ],
   },

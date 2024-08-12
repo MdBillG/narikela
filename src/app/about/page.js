@@ -17,6 +17,35 @@ const About = () => {
 
     return (
         <>
+            <div className="relative">
+                <div className="sm:block hidden">
+                    <img className="h-full" src="/image/banner/aboutusl.jpg" alt="" />
+                </div>
+                <div className="sm:hidden block ">
+                    <img className="h-full" src="/image/banner/aboutusm.jpg" alt="" />
+                </div>
+
+                <div className="absolute bottom-[4%] left-[28%] sm:left-[500px]  sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center sm:w-[25%] font-cormorant">
+                    <p className="text-xs sm:text-xl text-[#F3EEE1] whitespace-nowrap ">
+                        Experience The Natural Goodness
+                    </p>
+                    <div className="text-xs sm:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
+                        <a href="/" className="mr-1 whitespace-nowrap">
+                            Home
+                        </a>
+                        <img
+                            className="h-3 sm:h-6 mx-1"
+                            src="/image/blogs/blogline.png"
+                            alt=""
+                            width={3}
+                            height={24}
+                        />
+                        <a href="/blogs" className="mx-1 whitespace-nowrap">
+                            Blogs
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div className="grid sm:grid-cols-2 grid-cols-1 sm:mx-16 sm:my-10 mt-4 ">
                 <div className="relative mx-7">
                     <img

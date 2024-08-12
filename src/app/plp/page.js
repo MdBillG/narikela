@@ -68,28 +68,34 @@ export default function page() {
 
     return (
         <>
-            <div className="relative">
-                <div>
-                    <img className="h-full" src="/image/blogs/blogbanner.png" alt="" />
-                </div>
 
-                <div className="absolute bottom-4 left-24 sm:left-[500px] sm:bottom-24 sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl h-12 w-56 flex flex-col justify-center items-center sm:h-24 sm:w-72">
-                    <p className="text-xs sm:text-xl text-[#F3EEE1]">
+            <div className="relative">
+                <div className='sm:block hidden'>
+                    <img className="h-full" src="/image/banner/productsl.jpg" alt="" />
+                </div>
+                <div className='sm:hidden block'>
+                    <img className="h-full" src="/image/banner/productsm.jpg" alt="" />
+                </div>
+                <div className="absolute bottom-[4%] left-[28%] sm:left-[500px]  sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center sm:w-[25%] font-cormorant">
+                    <p className="text-xs sm:text-xl text-[#F3EEE1] whitespace-nowrap ">
                         Experience The Natural Goodness
                     </p>
-                    <span className="text-xs sm:text-xl text-[#D1B87A] flex">
-                        <a href="" className="mr-1">
+
+                    <div className="text-xs sm:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
+                        <a href="/" className="mr-1 whitespace-nowrap">
                             Home
                         </a>
                         <img
-                            className="h-3 sm:h-6 mt-[2px]"
+                            className="h-3 sm:h-6 mx-1"
                             src="/image/blogs/blogline.png"
                             alt=""
+                            width={3}
+                            height={24}
                         />
-                        <a href="" className="ml-1">
+                        <a href="/blogs" className="mx-1 whitespace-nowrap">
                             Blogs
                         </a>
-                    </span>
+                    </div>
                 </div>
             </div>
 

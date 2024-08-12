@@ -29,6 +29,8 @@ export default function page() {
     const [size, setSize] = useState("")
     const [price, setPrice] = useState("")
     const [name, setName] = useState("")
+    const [secondName, setSecondName] = useState("")
+
     const [product, setProduct] = useState("all");
 
     console.log("size", size)
@@ -44,9 +46,10 @@ export default function page() {
     useEffect(() => {
         const newProducts = presentId.map((details) => ({
             id: details.id,
-            mrp: setPrice(details.mrp),
-            name: setName(details.name),
-            size: setSize(details.size),
+            mrp: setPrice(details?.mrp),
+            name: setName(details?.name),
+            size: setSize(details?.size),
+            second: setSecondName(details?.secondName)
         }));
 
     }, [presentId]);
@@ -62,6 +65,7 @@ export default function page() {
             icon: variant.icon,
             benefits: variant?.benefits,
             sellingPrice: variant?.sellingPrice,
+
         })
     );
 
@@ -85,28 +89,47 @@ export default function page() {
     return (
         <div className="">
             <div className="relative">
-                <div>
-                    <img className="h-full" src="/image/blogs/blogbanner.png" alt="" />
+                <div className='sm:block hidden'>
+                    <img className="h-full" src="/image/banner/productsl.jpg" alt="" />
                 </div>
-
-                <div className="absolute bottom-4 left-24 sm:left-[500px] sm:bottom-24 sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl h-12 w-56 flex flex-col justify-center items-center sm:h-24 sm:w-72">
-                    <p className="text-xs sm:text-xl text-[#F3EEE1]">
-                        Experience The Natural Goodness
+                <div className='sm:hidden block'>
+                    <img className="h-full" src="/image/banner/productsm.jpg" alt="" />
+                </div>
+                <div className="absolute bottom-[4%] left-[28%] sm:left-[500px]  sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center sm:w-[25%] font-cormorant">
+                    <p className="text-xs sm:text-xl text-[#F3EEE1] ">
+                        Experience The
                     </p>
-                    <span className="text-xs sm:text-xl text-[#D1B87A] flex">
-                        <a href="/" className="mr-1">
+                    <p className="text-xs sm:text-xl text-[#F3EEE1] ">
+                        Natural Goodness
+                    </p>
+                    <div className="text-xs sm:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
+                        <a href="/" className="mr-1 whitespace-nowrap">
                             Home
                         </a>
                         <img
-                            className="h-3 sm:h-6 mt-[2px]"
+                            className="h-3 sm:h-6 mx-1"
                             src="/image/blogs/blogline.png"
                             alt=""
+                            width={3}
+                            height={24}
                         />
-                        <a href="/blogs" className="ml-1">
+                        <a href="/blogs" className="mx-1 whitespace-nowrap">
                             Blogs
                         </a>
-                    </span>
+                        <img
+                            className="h-3 sm:h-6 mx-1"
+                            src="/image/blogs/blogline.png"
+                            alt=""
+                            width={3}
+                            height={24}
+                        />
+                        <a href="/" className="ml-1 whitespace-nowrap">
+                            {secondName}
+                        </a>
+                    </div>
                 </div>
+
+
             </div>
             <div className="sm:ml-[100px] lg:ml-[100px] md:ml[100pxs] ml-2">
                 <div className=" text-xl font-semibold text-[#593B1F]  italic pt-4 sm:w-3/4 mx-auto">
