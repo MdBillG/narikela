@@ -12,46 +12,33 @@ const page = () => {
     return (
 
         <div>
-
             <div className="relative">
                 <div className='sm:block hidden'>
-                    <img className="h-full" src="/image/banner/blogsl.jpg" alt="" />
+                    <img className="h-full w-full" src="/image/banner/blogsl.jpg" alt="" />
                 </div>
                 <div className='sm:hidden block'>
-                    <img className="h-full" src="/image/banner/blogsm.jpg" alt="" />
+                    <img className="h-full w-full" src="/image/banner/blogsm.jpg" alt="" />
                 </div>
-
-
-                <div className="absolute bottom-[4%] left-[28%] sm:left-[500px]  sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center sm:w-[25%] font-cormorant">
-                    <p className="text-xs sm:text-xl text-[#F3EEE1] whitespace-nowrap ">
-                        Experience The Natural Goodness
-                    </p>
-
-                    <div className="text-xs sm:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
-                        <a href="/" className="mr-1 whitespace-nowrap">
-                            Home
-                        </a>
-                        <img
-                            className="h-3 sm:h-6 mx-1"
-                            src="/image/blogs/blogline.png"
-                            alt=""
-                            width={3}
-                            height={24}
-                        />
-                        <a href="/blogs" className="mx-1 whitespace-nowrap">
-                            Blogs
-                        </a>
+                <div className="absolute inset-x-0 bottom-2 flex items-center justify-center">
+                    <div className="w-[70%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center font-cormorant">
+                        <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#F3EEE1] whitespace-nowrap text-center">
+                            Experience The Natural Goodness
+                        </p>
+                        <div className="text-xs sm:text-base md:text-lg lg:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
+                            <a href="/" className="mr-1 whitespace-nowrap">Home</a>
+                            <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
+                            <a href="/blogs" className="mx-1 whitespace-nowrap">Blogs</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="my-2">
-
                 <div className="flex sm:flex-row  flex-col sm:justify-center sm:w-2/3 sm:mx-auto font-cormorant sm:space-x-7 mx-2">
                     <div className="relative sm:block hidden  ">
                         <img
                             className=" sm:w-72 h-full rounded-sm"
-                            src="/image/blogs/blogmonday.png"
+                            src="/image/blogs/blog2.jpg"
                             alt="sdddddddd"
                         />
                         <span className="flex flex-row absolute bottom-3 bg-[#D1B87A] sm:w-[280px] sm:mx-1 items-center text-[#593B1F] bg-opacity-85 sm:h-10 mx-2  w-40">
@@ -83,7 +70,7 @@ const page = () => {
                     <div className="relative sm:hidden block  ">
                         <img
                             className=" sm:w-72 h-full rounded-sm"
-                            src="/image/blogs/blogmonday.png"
+                            src="/image/blogs/blog2.jpg"
                             alt="sdddddddd"
                         />
                         <span className="flex flex-row absolute bottom-3 bg-[#D1B87A] sm:w-[280px] sm:mx-1 items-center text-[#593B1F] bg-opacity-85 sm:h-10 mx-2  w-40">
@@ -102,11 +89,6 @@ const page = () => {
                 <div className="sm:flex sm:justify-evenly sm:w-full my-4">
                     <hr className="sm:w-1/2 h-px bg-[#593B1F]" />
                 </div>
-
-
-
-
-
                 <div className="flex sm:flex-row  flex-col sm:justify-center sm:w-2/3 sm:mx-auto font-cormorant sm:space-x-7 mx-2 ">
 
 
@@ -128,7 +110,7 @@ const page = () => {
                     <div className="relative  ">
                         <img
                             className="sm:w-72 h-full rounded-sm"
-                            src="/image/blogs/blogmonday.png"
+                            src="/image/blogs/blog1.jpg"
                             alt="sdddddddd"
                         />
                         <span className="flex flex-row absolute bottom-3 bg-[#D1B87A] sm:w-[280px] sm:mx-1 items-center text-[#593B1F] bg-opacity-85 sm:h-10 w-44 mx-2 ">

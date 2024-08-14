@@ -30,6 +30,7 @@ export default function page() {
     const [price, setPrice] = useState("")
     const [name, setName] = useState("")
     const [secondName, setSecondName] = useState("")
+    const [mImage, setMImage] = useState()
 
     const [product, setProduct] = useState("all");
 
@@ -49,11 +50,12 @@ export default function page() {
             mrp: setPrice(details?.mrp),
             name: setName(details?.name),
             size: setSize(details?.size),
-            second: setSecondName(details?.secondName)
+            second: setSecondName(details?.secondName),
+            setMImage: setMImage(details?.mainImage)
+
         }));
 
     }, [presentId]);
-
 
     const coconutOilVariants = coconutData[0].coconut[0]?.variants?.map(
         (variant) => ({
@@ -90,47 +92,28 @@ export default function page() {
         <div className="">
             <div className="relative">
                 <div className='sm:block hidden'>
-                    <img className="h-full" src="/image/banner/productsl.jpg" alt="" />
+                    <img className="h-full w-full" src="/image/banner/productsl.jpg" alt="" />
                 </div>
                 <div className='sm:hidden block'>
-                    <img className="h-full" src="/image/banner/productsm.jpg" alt="" />
+                    <img className="h-full w-full" src="/image/banner/productsm.jpg" alt="" />
                 </div>
-                <div className="absolute bottom-[4%] left-[28%] sm:left-[500px]  sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center sm:w-[25%] font-cormorant">
-                    <p className="text-xs sm:text-xl text-[#F3EEE1] ">
-                        Experience The
-                    </p>
-                    <p className="text-xs sm:text-xl text-[#F3EEE1] ">
-                        Natural Goodness
-                    </p>
-                    <div className="text-xs sm:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
-                        <a href="/" className="mr-1 whitespace-nowrap">
-                            Home
-                        </a>
-                        <img
-                            className="h-3 sm:h-6 mx-1"
-                            src="/image/blogs/blogline.png"
-                            alt=""
-                            width={3}
-                            height={24}
-                        />
-                        <a href="/blogs" className="mx-1 whitespace-nowrap">
-                            Blogs
-                        </a>
-                        <img
-                            className="h-3 sm:h-6 mx-1"
-                            src="/image/blogs/blogline.png"
-                            alt=""
-                            width={3}
-                            height={24}
-                        />
-                        <a href="/" className="ml-1 whitespace-nowrap">
-                            {secondName}
-                        </a>
+                <div className="absolute inset-x-0 bottom-2 flex items-center justify-center">
+                    <div className="w-[70%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center font-cormorant">
+                        <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#F3EEE1] whitespace-nowrap text-center">
+                            Experience The Natural Goodness
+                        </p>
+                        <div className="text-xs sm:text-base md:text-lg lg:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
+                            <a href="/" className="mr-1 whitespace-nowrap">Home</a>
+                            <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
+                            <a href="/blogs" className="mx-1 whitespace-nowrap">Products</a>
+                            <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
+                            <a href="/blogs" className="mx-1 whitespace-nowrap">{secondName}</a>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
+
+
             <div className="sm:ml-[100px] lg:ml-[100px] md:ml[100pxs] ml-2">
                 <div className=" text-xl font-semibold text-[#593B1F]  italic pt-4 sm:w-3/4 mx-auto">
                     NARIKELA TREASURES
@@ -141,7 +124,7 @@ export default function page() {
 
                 <div className="flex sm:flex-row  flex-col ">
                     <div className="drop-shadow-2xl sm:w-[435px]  ml-2">
-                        <img className=" w-full " src={currentImage} alt="" />
+                        <img className=" w-full " src={mImage} alt="" />
                     </div>
 
                     <div className=" sm:flex hidden mb-[1px] mt-[1px] drop-shadow-2xl  sm:flex-col">
@@ -221,17 +204,16 @@ export default function page() {
                     </div>
                 </div>
 
-                <div className="flex ">
-
-                    <div className="font-poppins  sm:hidden block  rounded-sm w-[50%]">
+                <div className="flex  justify-between w-full">
+                    <div className="font-poppins  sm:hidden block  rounded-sm  space-y-1.5 p-2">
                         {benefits.slice(0, 3).map((benefit, idx) => (
                             <div key={idx} className="flex  text-[#1B2F1F]">
-                                <img src={icon} alt="" className="w-2 h-2 " />
-                                <span className="text-[9px] sm:text-xs">{benefit}</span>
+                                <img src={icon} alt="" className="w-2 h-2 mr-2" />
+                                <span className="text-[12px] sm:text-xs">{benefit}</span>
                             </div>
                         ))}
                     </div>
-                    <div className="flex flex-col  text-sm border border-gray-900  pl-2 pt-2 pb-2 shadow-lg drop-shadow-2xl border-opacity-30 rounded-sm sm:w-40 w-28 font-poppins mr-2">
+                    <div className="flex flex-col  text-sm border border-gray-900  pl-2 pt-2 pb-2 shadow-lg drop-shadow-2xl border-opacity-30 rounded-sm sm:w-40 font-poppins mr-2 p-4">
                         <div className="flex pb-1  ">
                             <img className="sm:w-5 sm:h-4 w-4 h-3  mt-1" src="/image/pdp/verified.png" alt="" />
                             <p className="sm:pl-2 pl-1 text-[#593B1F] sm:text-sm text-[10px] "> 100% </p>
@@ -248,7 +230,6 @@ export default function page() {
                             <p className="sm:pl-1 pl-0.5 sm:text-sm text-[10px]">Shipping</p>
                         </div>
                     </div>
-
                 </div>
 
                 <button
@@ -289,7 +270,7 @@ export default function page() {
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={7}
-                    slidesPerView={3}
+                    slidesPerView={2}
                     loop={true}
                     pagination={{
                         clickable: true,
@@ -335,7 +316,7 @@ export default function page() {
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={7}
-                    slidesPerView={3}
+                    slidesPerView={2}
                     loop={true}
                     pagination={{
                         clickable: true,

@@ -11,7 +11,7 @@ const Youtube = () => {
                     src="https://www.youtube.com/embed/VX9nJFQlumw"
                     width={"100%"}
                     height={"500px"}
-                    frameborder="0"
+
                     allowfullscreen
                 />
             </div>

@@ -18,31 +18,22 @@ const About = () => {
     return (
         <>
             <div className="relative">
-                <div className="sm:block hidden">
-                    <img className="h-full" src="/image/banner/aboutusl.jpg" alt="" />
+                <div className='sm:block hidden'>
+                    <img className="h-full w-full" src="/image/banner/aboutusl.jpg" alt="" />
                 </div>
-                <div className="sm:hidden block ">
-                    <img className="h-full" src="/image/banner/aboutusm.jpg" alt="" />
+                <div className='sm:hidden block'>
+                    <img className="h-full w-full" src="/image/banner/aboutusl.jpg" alt="" />
                 </div>
-
-                <div className="absolute bottom-[4%] left-[28%] sm:left-[500px]  sm:text-center my-auto bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center sm:w-[25%] font-cormorant">
-                    <p className="text-xs sm:text-xl text-[#F3EEE1] whitespace-nowrap ">
-                        Experience The Natural Goodness
-                    </p>
-                    <div className="text-xs sm:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
-                        <a href="/" className="mr-1 whitespace-nowrap">
-                            Home
-                        </a>
-                        <img
-                            className="h-3 sm:h-6 mx-1"
-                            src="/image/blogs/blogline.png"
-                            alt=""
-                            width={3}
-                            height={24}
-                        />
-                        <a href="/blogs" className="mx-1 whitespace-nowrap">
-                            Blogs
-                        </a>
+                <div className="absolute inset-x-0 bottom-2 flex items-center justify-center">
+                    <div className="w-[70%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-2 sm:p-4 flex flex-col justify-center items-center font-cormorant">
+                        <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#F3EEE1] whitespace-nowrap text-center">
+                            Experience The Natural Goodness
+                        </p>
+                        <div className="text-xs sm:text-base md:text-lg lg:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
+                            <a href="/" className="mr-1 whitespace-nowrap">Home</a>
+                            <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
+                            <a href="/blogs" className="mx-1 whitespace-nowrap">About Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
