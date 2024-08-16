@@ -141,9 +141,9 @@ export default function page() {
                     </div>
 
                     <div className=" sm:flex hidden mb-[1px] mt-[1px] drop-shadow-2xl  sm:flex-col">
-                        <img className="sm:w-40 sm:h-36 w-[122px]" src={pdp[0].side1} alt="" />
-                        <img className="sm:w-40 sm:h-36  w-[122px]" src={pdp[0].side2} alt="" />
-                        <img className="sm:w-40 sm:h-36  w-[122px]" src={pdp[0].side3} alt="" />
+                        <img onClick={() => setCurrentImage(pdp[0].side1)} className="sm:w-40 sm:h-36 w-[122px]" src={pdp[0].side1} alt="" />
+                        <img onClick={() => setCurrentImage(pdp[0].side2)} className="sm:w-40 sm:h-36  w-[122px]" src={pdp[0].side2} alt="" />
+                        <img onClick={() => setCurrentImage(pdp[0].side3)} className="sm:w-40 sm:h-36  w-[122px]" src={pdp[0].side3} alt="" />
                     </div>
                 </div>
 
