@@ -83,7 +83,7 @@ export default function page() {
                         <div className="text-xs sm:text-base md:text-lg lg:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
                             <a href="/" className="mr-1 whitespace-nowrap">Home</a>
                             <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
-                            <a href="/blogs" className="mx-1 whitespace-nowrap">Blogs</a>
+                            <a href="/Products" className="mx-1 whitespace-nowrap">Blogs</a>
                         </div>
                     </div>
                 </div>

@@ -118,7 +118,7 @@ export default function page() {
                         <div className="text-xs sm:text-base md:text-lg lg:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
                             <a href="/" className="mr-1 whitespace-nowrap">Home</a>
                             <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
-                            <a href="/blogs" className="mx-1 whitespace-nowrap">Products</a>
+                            <a href="/plp" className="mx-1 whitespace-nowrap">Products</a>
                             <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
                             <a href="/blogs" className="mx-1 whitespace-nowrap">{secondName}</a>
                         </div>
@@ -137,7 +137,7 @@ export default function page() {
 
                 <div className="flex sm:flex-row  flex-col ">
                     <div className="drop-shadow-2xl sm:w-[435px]  ml-2">
-                        <img className=" w-full " src={currentImage} alt="" />
+                        <img className=" w-[98%]" src={currentImage} alt="" />
                     </div>
 
                     <div className=" sm:flex hidden mb-[1px] mt-[1px] drop-shadow-2xl  sm:flex-col">
