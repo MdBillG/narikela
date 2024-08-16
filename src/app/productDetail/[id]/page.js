@@ -24,13 +24,14 @@ import PdpKeyFeatures from "@/app/components/Cards/PdpKeyFeatures";
 
 
 export default function page() {
-    const [currentImage, setCurrentImage] = useState(pdp[0].main)
     const { id } = useParams()
     const [size, setSize] = useState("")
     const [price, setPrice] = useState("")
     const [name, setName] = useState("")
     const [secondName, setSecondName] = useState("")
     const [mImage, setMImage] = useState()
+    const [currentImage, setCurrentImage] = useState(mImage)
+
 
     const [product, setProduct] = useState("all");
 
@@ -88,6 +89,18 @@ export default function page() {
     const benefits = firstVariant.benefits || [];
     const icon = firstVariant.icon;
 
+
+    useEffect(() => {
+        if (presentId.length > 0) {
+            const firstProduct = presentId[0];
+            setMImage(firstProduct?.mainImage);
+        }
+    }, [presentId]);
+
+    useEffect(() => {
+        setCurrentImage(mImage);
+    }, [mImage]);
+
     return (
         <div className="">
             <div className="relative">
@@ -124,7 +137,7 @@ export default function page() {
 
                 <div className="flex sm:flex-row  flex-col ">
                     <div className="drop-shadow-2xl sm:w-[435px]  ml-2">
-                        <img className=" w-full " src={mImage} alt="" />
+                        <img className=" w-full " src={currentImage} alt="" />
                     </div>
 
                     <div className=" sm:flex hidden mb-[1px] mt-[1px] drop-shadow-2xl  sm:flex-col">
