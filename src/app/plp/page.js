@@ -25,7 +25,6 @@ export default function page() {
             sellingPrice: variant?.sellingPrice,
         })
     );
-    console.log("coconutOilVariants", coconutOilVariants);
 
     const DesssicatePowder = coconutData[0].DesssicatePowder[0]?.variants?.map(
         (variant) => ({
@@ -53,9 +52,7 @@ export default function page() {
         }
     );
 
-    console.log(coconutOilImages);
 
-    console.log("coconutOilVariants", coconutOilVariants);
 
     const data =
         product === "all"
@@ -83,7 +80,7 @@ export default function page() {
                         <div className="text-xs sm:text-base md:text-lg lg:text-xl text-[#D1B87A] flex flex-wrap justify-center items-center">
                             <a href="/" className="mr-1 whitespace-nowrap">Home</a>
                             <img className="h-3 sm:h-4 md:h-5 lg:h-6 mx-1" src="/image/blogs/blogline.png" alt="" width={3} height={24} />
-                            <a href="/Products" className="mx-1 whitespace-nowrap">Blogs</a>
+                            <a href="/plp" className="mx-1 whitespace-nowrap">Products</a>
                         </div>
                     </div>
                 </div>
