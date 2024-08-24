@@ -23,9 +23,9 @@ const Footer = () => {
                                 farmers and sustainable practices.
                             </div>
                             <div className="flex gap-6 mt-3">
-                                <img className="h-6" src="/icons/footer/facebook.png" alt="" />
+                                <img className="h-6 bg-[#1B2F1F]" src="/icons/footer/facebook2.jpg" alt="" />
                                 <img className="h-6" src="/icons/footer/youtube.png" alt="" />
-                                <img className="h-6" src="/icons/footer/instagram.png" alt="" />
+                                <img className="h-6 bg-[#1B2F1F]" src="/icons/footer/instagram2.jpg" alt="" />
 
 
                             </div>

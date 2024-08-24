@@ -87,73 +87,78 @@ export default function page() {
             </div>
 
 
-            <div className="flex flex-col justify-center text-center">
-                <span className=' text-xl font-semibold text-[#593B1F]  italic pt-4 '> NARIKELA TREASURES</span>
-                <span className=' text-4xl  text-[#1B2F1F] text-center  mt-4'> Experience Purity in Every Drop</span>
-            </div>
-            <div className="font-poppins mx-3">
-                <div className=" grid grid-cols-2 sm:grid-cols-2  gap-3 drop-shadow-2xl my-10 sm:w-[60%] mx-auto ">
-                    {data?.map((variant, index) => (
-                        <div
-                            key={variant.id}
+            <div className="mx-3">
 
-                            onClick={() => router.push(`/productDetail/${variant.id}`)}
-                        >
-                            <div className="border border-[#D1B87A] rounded-lg drop-shadow-sm shadow-xl pb-4 border-opacity-25">
-                                <img src={variant.mainImage} alt="" className="rounded-t-lg" />
-                                <div className="bg-[#1B2F1F] h-[1px] "></div>
 
-                                <p className="mx-4 font-medium text-[#1B2F1F] mt-2">
-                                    {variant.name}
+                <div className="flex flex-col justify-center text-center">
+                    <span className=' text-xl font-semibold text-[#593B1F]  italic pt-4 '> NARIKELA TREASURES</span>
+                    <span className=' text-4xl  text-[#1B2F1F] text-center  mt-4'> Experience Purity in Every Drop</span>
+                </div>
+                <div className="font-poppins ">
+                    <div className=" grid grid-cols-2 sm:grid-cols-2  gap-3 drop-shadow-2xl my-10 sm:w-[60%] mx-auto ">
+                        {data?.map((variant, index) => (
+                            <div
+                                key={variant.id}
 
-                                </p>
-                                <div className="flex">
-                                    <img className="w-4 h-4 mt-1 ml-3" src="/image/pdp/currencylogo.png" alt="" />
+                                onClick={() => router.push(`/productDetail/${variant.id}`)}
+                            >
+                                <div className="border border-[#D1B87A] rounded-lg drop-shadow-sm shadow-xl pb-4 border-opacity-25">
+                                    <img src={variant.mainImage} alt="" className="rounded-t-lg" />
+                                    <div className="bg-[#1B2F1F] h-[1px] "></div>
+
+                                    <p className="mx-4 font-medium text-[#1B2F1F] mt-2">
+                                        {variant.name}
+
+                                    </p>
                                     <div className="flex">
-                                        <div className="line-through ml-[8%] mr-[8%]">{variant.mrp}</div>
-                                        {variant.sellingPrice}
+                                        <img className="w-4 h-4 mt-1 ml-3" src="/image/pdp/currencylogo.png" alt="" />
+                                        <div className="flex">
+                                            <div className="line-through ml-[8%] mr-[8%]">{variant.mrp}</div>
+                                            {variant.sellingPrice}
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="mx-2 sm:block hidden">
-                                    <div className="grid grid-cols-2 gap-1 mt-2 mx-1 ">
-                                        {variant.benefits.map((benefit, idx) => (
-                                            <div
-                                                key={idx}
-                                                className="flex items-center text-start font-thin text-xs text-[#1B2F1F]"
-                                            >
-                                                <img
-                                                    src={variant.icon}
-                                                    alt=""
-                                                    className="w-2 h-2 mr-2"
-                                                />
-                                                <span className="sm:text-xs text-[9px] ">{benefit}</span>
-                                            </div>
-                                        ))}
+                                    <div className="mx-2 sm:block hidden">
+                                        <div className="grid grid-cols-2 gap-1 mt-2 mx-1 ">
+                                            {variant.benefits.map((benefit, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="flex items-center text-start font-thin text-xs text-[#1B2F1F]"
+                                                >
+                                                    <img
+                                                        src={variant.icon}
+                                                        alt=""
+                                                        className="w-2 h-2 mr-2"
+                                                    />
+                                                    <span className="sm:text-xs text-[9px] ">{benefit}</span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="mx-2 sm:hidden block">
-                                    <div className="flex gap-2 mt-2 mx-1">
-                                        {variant.benefits.slice(0, 2).map((benefit, idx) => (
-                                            <div key={idx} className="flex items-center text-start font-thin text-xs text-[#1B2F1F]">
-                                                <img src={variant.icon} alt="" className="w-2 h-2 mr-2" />
-                                                <span className="text-[9px] sm:text-xs">{benefit}</span>
-                                            </div>
-                                        ))}
+                                    <div className="mx-2 sm:hidden block">
+                                        <div className="flex gap-2 mt-2 mx-1">
+                                            {variant.benefits.slice(0, 2).map((benefit, idx) => (
+                                                <div key={idx} className="flex items-center text-start font-thin text-xs text-[#1B2F1F]">
+                                                    <img src={variant.icon} alt="" className="w-2 h-2 mr-2" />
+                                                    <span className="text-[9px] sm:text-xs">{benefit}</span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
 
 
-                                <div className="pt-2">
-                                    <button className="  w-[82%] border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F]   mx-[10%] rounded-md h-8 items-center">
-                                        View Product
-                                    </button>
+                                    <div className="pt-2">
+                                        <button className="  w-[82%] border-[#D1B87A] text-[#D1B87A] border-opacity-55 bg-[#1B2F1F]   mx-[10%] rounded-md h-8 items-center">
+                                            View Product
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
+
         </>
     );
 }

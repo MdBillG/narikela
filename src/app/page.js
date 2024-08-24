@@ -16,6 +16,8 @@ import Image from 'next/image';
 import Footer from "./components/Footer/Footer";
 import Instagram from "./components/Cards/instagram";
 import Youtube from "./components/youtube/Tube";
+import HomePageIcon from "./components/Cards/homepageIcon";
+import Testimonials from "./components/testimonials/Testimonials";
 
 
 
@@ -36,7 +38,9 @@ export default function Home() {
       <FourCards />
       <AboutUs />
       <OurUps />
+      <HomePageIcon />
       <Youtube />
+      <Testimonials />
       <Instagram />
       {/* <VideoBanner />
       <Infographic />

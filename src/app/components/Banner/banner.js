@@ -12,14 +12,6 @@ import 'swiper/css/navigation';
 import { HOMEBANNER, HOMEBANNERM } from "@/coconut-oil";
 
 export default function Banner() {
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const images = [
-        "/image/banner/coconutbanner2.jpg",
-        "/image/banner/coconutbanner4.jpg",
-        "/image/banner/coconutbanner5.jpg"
-    ]
-
-
     return (
         <>
             <div className="sm:block hidden ">
@@ -45,7 +37,7 @@ export default function Banner() {
                 </Swiper>
             </div>
 
-            <div className="sm:hidden block">
+            <div className="sm:hidden block ">
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={7}
@@ -58,8 +50,7 @@ export default function Banner() {
                     {HOMEBANNERM[0].images.map((image, index) => (
                         <SwiperSlide key={index}>
                             <img
-                                // onClick={() => setCurrentImage(pdp[0].side1)}
-                                className="w-full h-auto"
+                                className="w-full h-[500px]"
                                 src={image.image}
                                 alt={`Instagram image ${index + 1}`}
                             />

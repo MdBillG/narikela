@@ -10,8 +10,8 @@ import 'swiper/css/navigation';
 const Instagram = () => {
     return (
         <>
-            <div className="container mx-auto px-4 my-8">
-                <h1 className='font-cormorant text-[#593B1F] font-normal sm:text-3xl text-center mb-6 italic text-xl'>
+            <div className="container mx-auto px-4 my-3">
+                <h1 className='font-cormorant text-[#593B1F] font-normal sm:text-3xl text-center mb-3 italic text-xl'>
                     BE PART OF OUR INSTAGRAM FAMILY
                 </h1>
                 <div className=" flex-wrap justify-center gap-4 sm:flex hidden ">
@@ -31,7 +31,7 @@ const Instagram = () => {
                     <Swiper
                         modules={[Pagination]}
                         spaceBetween={7}
-                        slidesPerView={2}
+                        slidesPerView={1}
                         loop={true}
                         pagination={{
                             clickable: true,
@@ -39,12 +39,13 @@ const Instagram = () => {
                     >
                         {instagram[0].images.map((image, index) => (
                             <SwiperSlide key={index}>
-                                <img
-                                    // onClick={() => setCurrentImage(pdp[0].side1)}
-                                    className="w-full h-auto"
-                                    src={image.image}
-                                    alt={`Instagram image ${index + 1}`}
-                                />
+                                <a href={image.link}>
+                                    <img
+                                        className="w-full h-auto"
+                                        src={image.image}
+                                        alt={`Instagram image ${index + 1}`}
+                                    />
+                                </a>
                             </SwiperSlide>
                         ))}
                     </Swiper>

@@ -4,7 +4,7 @@ const PdpKeyFeatures = () => {
     return (
 
         <div className=" w-[93%] bg-[#EBEAD5] mx-auto py-2 sm:hidden block ">
-            <div className="flex flex-col gap-3  w-[83%] mx-auto font-medium font-cormorant text-lg">
+            <div className="flex flex-col gap-3  w-[83%] mx-auto font-medium font-cormorant text-lg py-2">
 
                 <div className="flex gap-2  ">
                     <img
