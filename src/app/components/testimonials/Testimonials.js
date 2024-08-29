@@ -20,7 +20,7 @@ const Testimonials = () => {
                 </div>
                 <div className="flex items-center justify-center">
                     <div className="w-[90%] sm:w-[90%] bg-[#263726] bg-opacity-50 border border-[#F3EEE1] border-opacity-30 drop-shadow-xl p-4 sm:p-6">
-                        <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#F3EEE1] text-center mb-4 font-cormorant">
+                        <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#F3EEE1] text-center mb-4 font-cormorant font-semibold italic">
                             CUSTOMERS DIARIES
                         </p>
                         <Swiper
