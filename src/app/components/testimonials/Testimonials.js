@@ -14,7 +14,7 @@ const Testimonials = () => {
     console.log("object", test)
     return (
         <>
-            <div className="my-3 mb-7 relative bg-cover bg-[url('/image/benifits/testimonials.png')] py-4">
+            <div className="my-9 mb-7 relative bg-cover bg-[url('/image/benifits/testimonials.png')] py-4">
                 <div className='absolute -top-14 sm:-top-20 md:-top-24 lg:-top-28 right-0 z-50 w-20 sm:w-24 md:w-28 lg:w-32'>
                     <img className="h-auto w-full" src="/image/benifits/tcoco.png" alt="Coconut" />
                 </div>
