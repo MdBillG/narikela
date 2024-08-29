@@ -351,3 +351,22 @@ export const use2 = [{
   name: "Reduces Bad Cholesterol "
 
 }]
+
+export const TESTMIONIALSS = [
+
+  {
+    name: 'Mamatha Vinay',
+    exp: 'I have been  using the coconut oil since 6 months and I should say its a great product as compared to other products available in market.Quality of the oil is really good.I could see the difference after I started using it.',
+    rating: '5'
+  },
+  {
+    name: 'Shamitha Anilkumar',
+    exp: 'This is my second buy of coconut oil. The oil is fresh and tastes good. Bought 5ltr can and the oil stayed fresh for a long time',
+    rating: '5'
+  },
+  {
+    name: 'Samatha punya manavi C',
+    exp: 'I Love the quality of Narikela coconut oil.. definitely I will repurchase again',
+    rating: '5'
+  }
+]
